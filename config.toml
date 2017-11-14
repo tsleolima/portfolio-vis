@@ -1,4 +1,4 @@
-baseurl = "tsleolima.gitub.io/visuInformacaoLab1"  # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
+baseurl = "https://tsleolima.gitub.io/visuInformacaoLab1/"  # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 title = "Léo Lima"
 copyright = "&copy; 2017 Your Name"
 theme = "hugo-academic"
@@ -241,18 +241,13 @@ defaultContentLanguageInSubdir = false
 
 [[menu.main]]
   name = "Posts"
-  url = "/post/"
+  url = "#posts"
   weight = 2
 
 [[menu.main]]
   name = "Projects"
   url = "#projects"
   weight = 4
-
-[[menu.main]]
-  name = "Teaching"
-  url = "#teaching"
-  weight = 5
 
 [[menu.main]]
   name = "Contact"
