@@ -23,7 +23,7 @@ weight = 5
 
 +++
 
-# Biography
+# Biografia
 
 Leonardo Felix, graduando em ciência da Computação na UFCG, em constante aprendizado e vontade em ingressar em projetos para alimentar sua sede por conhecimento.
 

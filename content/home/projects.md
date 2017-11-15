@@ -5,11 +5,11 @@ widget = "projects"
 active = true
 date = "2016-04-20T00:00:00"
 
-title = "Projects"
+title = "Projetos"
 subtitle = ""
 
 # Order that this section will appear in.
-weight = 50
+weight = 20
 
 # View.
 # Customize how projects are displayed.
@@ -27,7 +27,7 @@ filter_default = 0
 [[filter]]
   name = "All"
   tag = "*"
-  
+
 [[filter]]
   name = "Deep Learning"
   tag = ".deep-learning"
@@ -37,4 +37,3 @@ filter_default = 0
   tag = ".demo"
 
 +++
-

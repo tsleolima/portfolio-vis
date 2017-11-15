@@ -3,10 +3,10 @@ date = 2016-04-20
 lastmod = 2017-09-03
 draft = false
 tags = ["academic", "hugo"]
-title = "loisjdfosidjfosdjifasdf"
+title = "Minhas primeiras visualizações"
 math = true
 summary = """
-Create a beautifully simple personal or academic website in under 10 minutes.
+5 visualizações sobre o açude açude epitácio pessoa - PB
 """
 
 [header]
@@ -15,37 +15,36 @@ caption = "Image credit: [**Academic**](https://github.com/gcushen/hugo-academic
 
 +++
 
-#asoidfjasod isa
+# Como tudo começou
 
-asdasd
-
-The Academic framework enables you to easily create a beautifully simple personal or academic website using the [Hugo](https://gohugo.io) static site generator.
-
-Key features:
-
-- Easily manage your homepage, blog posts, publications, talks, and projects
-- Configurable widgets available for Biography, Publications, Projects, News/Blog, Talks, and Contact
-- Need a different section? Just use the Custom widget!
-- Write in [Markdown]({{< ref "post/writing-markdown-latex.md" >}}) for easy formatting and code highlighting, with [LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics) for mathematical expressions
-- Social/academic network linking, [Google Analytics](https://analytics.google.com), and [Disqus](https://disqus.com) comments
-- Responsive and mobile friendly
-- Simple and refreshing one page design
-- Multilingual and easy to customize
+- Primeiro de tudo, eu sou péssimo com ideias de visualizações de Dados ( isso foi para ser engraçado).
+- Esse é um laboratorio para universidade e quem sabe alguem aproveite esses dados em um futuro.
+- Minha missão é passar para vocês algumas situações que enfrentamos no decorrer dos anos com o açude Epitácio Pessoa.
 
 {{% toc %}}
 
-## Installation
+## Historia sobre o açude Epitácio Pessoa.
 
-1. [Install Hugo](https://georgecushen.com/create-your-website-with-hugo/#installing-hugo) and create a new website by typing the following commands in your *Terminal* or *Command Prompt* app:
+O Açude Epitácio Pessoa, popularmente conhecido como Boqueirão, é uma represa localizada no município de Boqueirão, estado brasileiro da Paraíba. Sua bacia se estende pelos municípios de Boqueirão, Cabaceiras e São Miguel de Taipu e abastece as cidades paraibanas de Campina Grande, Boqueirão, Queimadas, Pocinhos, Caturité, Riacho de Santo Antônio e Barra de São Miguel.
 
-        hugo new site my_website
-        cd my_website
+O açude, que está situado na sub-bacia hidrográfica do Alto Paraíba, que juntamente com as sub-bacias do rio Taperoá e do Médio e Baixo Paraíba constituem a bacia hidrográfica do rio Paraíba, abrange uma área de 19.088,5 km², o que corresponde a 34% do território paraibano. Os 78 municípios inseridos nela abrigam uma população em torno de 1,8 milhão de habitantes, aproximadamente, 55% da população total do estado. Essas duas sub-bacias hidrográficas estão situadas em uma área de baixa pluviosidade, com médias anuais inferiores a 600 mm.
 
-2. Install Academic with [git](https://help.github.com/articles/set-up-git/):
+Um estudo desenvolvido no início dos anos 2000 pela Companhia de Água e Esgotos da Paraíba (Cagepa) revelou que o volume hídrico acumulado no açude sofreu uma redução de 67,27% nos últimos 20 anos. Na época de sua construção, a capacidade de armazenamento do açude inicialmente era de 536 milhões de metros cúbicos, mas com o assoreamento essa capacidade foi reduzida para 436 milhões. A sua lâmina d’água abrange uma superfície em torno de 2.700 hectares. Nesse mesmo período, segundo dados da pesquisa, o número de ligações de água em prédios residenciais e comerciais em Campina Grande aumentou em 102,9%, as quais passaram de 40.298, em 1983, para 81.796, em 2003.
 
-        git clone https://github.com/gcushen/hugo-academic.git themes/academic
+O clima de toda a região da bacia é tropical quente e seco, com máxima de 37 °Celsius e mínimas de 16 °C. A precipitação média na região é de 600 mm/ano, caracterizando-se um clima de semi-árido.
 
-    Or alternatively, [download Academic](https://github.com/gcushen/hugo-academic/archive/master.zip) and extract it into a `themes/academic` folder within your Hugo website.
+    Fonte: https://pt.wikipedia.org/wiki/Açude_Boqueirão
+
+Para mais informações sobre a atual crise hídrica, acesse essa visualização sobre o nosso açude:
+
+    https://olhonagua.insa.gov.br/#!/?id=12172&reservatorio=epitacio_pessoa
+(nela pode ser visto também a situação de outros reservatorios.)
+
+
+# Bom vamos ao que interessa ?
+
+Vamos lá, viemos aqui para ver algumas visualizações sobre o açude Epitacio Pessoa, então abaixo estará listado 5 visualizações de dados
+usando gráficos tabulares e de todos os tipos, espero que aproveitem. *Lets Gooo!*
 
 3. If you are creating a new website, copy the contents of the `exampleSite` folder to your website root folder, overwriting existing files if necessary. The `exampleSite` folder contains an example config file and content to help you get started.
 

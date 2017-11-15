@@ -6,43 +6,35 @@
     <description>Recent content in Posts on Léo Lima</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2017 Your Name</copyright>
+    <copyright>&amp;copy; 2017 Leonardo Lima</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0300</lastBuildDate>
     <atom:link href="/visuInformacaoLab1/post/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>loisjdfosidjfosdjifasdf</title>
+      <title>Minhas primeiras visualizações</title>
       <link>https://tsleolima.gitub.io/visuInformacaoLab1/post/getting-started/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
       
       <guid>https://tsleolima.gitub.io/visuInformacaoLab1/post/getting-started/</guid>
       <description>
 
-&lt;p&gt;#asoidfjasod isa&lt;/p&gt;
-
-&lt;p&gt;asdasd&lt;/p&gt;
-
-&lt;p&gt;The Academic framework enables you to easily create a beautifully simple personal or academic website using the &lt;a href=&#34;https://gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt; static site generator.&lt;/p&gt;
-
-&lt;p&gt;Key features:&lt;/p&gt;
+&lt;h1 id=&#34;como-tudo-começou&#34;&gt;Como tudo começou&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Easily manage your homepage, blog posts, publications, talks, and projects&lt;/li&gt;
-&lt;li&gt;Configurable widgets available for Biography, Publications, Projects, News/Blog, Talks, and Contact&lt;/li&gt;
-&lt;li&gt;Need a different section? Just use the Custom widget!&lt;/li&gt;
-&lt;li&gt;Write in &lt;a href=&#34;&#34; target=&#34;_blank&#34;&gt;Markdown&lt;/a&gt; for easy formatting and code highlighting, with &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34;&gt;LaTeX&lt;/a&gt; for mathematical expressions&lt;/li&gt;
-&lt;li&gt;Social/academic network linking, &lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34;&gt;Google Analytics&lt;/a&gt;, and &lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34;&gt;Disqus&lt;/a&gt; comments&lt;/li&gt;
-&lt;li&gt;Responsive and mobile friendly&lt;/li&gt;
-&lt;li&gt;Simple and refreshing one page design&lt;/li&gt;
-&lt;li&gt;Multilingual and easy to customize&lt;/li&gt;
+&lt;li&gt;Primeiro de tudo, eu sou péssimo com ideias de visualizações de Dados ( isso foi para ser engraçado).&lt;/li&gt;
+&lt;li&gt;Esse é um laboratorio para universidade e quem sabe alguem aproveite esses dados em um futuro.&lt;/li&gt;
+&lt;li&gt;Minha missão é passar para vocês algumas situações que enfrentamos no decorrer dos anos com o açude Epitácio Pessoa.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;nav id=&#34;TableOfContents&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;
+&lt;li&gt;&lt;a href=&#34;#como-tudo-começou&#34;&gt;Como tudo começou&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#installation&#34;&gt;Installation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#historia-sobre-o-açude-epitácio-pessoa&#34;&gt;Historia sobre o açude Epitácio Pessoa.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#bom-vamos-ao-que-interessa&#34;&gt;Bom vamos ao que interessa ?&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#getting-started&#34;&gt;Getting Started&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#core-parameters&#34;&gt;Core parameters&lt;/a&gt;&lt;/li&gt;
@@ -71,22 +63,32 @@
 &lt;/nav&gt;
 
 
-&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h2 id=&#34;historia-sobre-o-açude-epitácio-pessoa&#34;&gt;Historia sobre o açude Epitácio Pessoa.&lt;/h2&gt;
 
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://georgecushen.com/create-your-website-with-hugo/#installing-hugo&#34; target=&#34;_blank&#34;&gt;Install Hugo&lt;/a&gt; and create a new website by typing the following commands in your &lt;em&gt;Terminal&lt;/em&gt; or &lt;em&gt;Command Prompt&lt;/em&gt; app:&lt;/p&gt;
+&lt;p&gt;O Açude Epitácio Pessoa, popularmente conhecido como Boqueirão, é uma represa localizada no município de Boqueirão, estado brasileiro da Paraíba. Sua bacia se estende pelos municípios de Boqueirão, Cabaceiras e São Miguel de Taipu e abastece as cidades paraibanas de Campina Grande, Boqueirão, Queimadas, Pocinhos, Caturité, Riacho de Santo Antônio e Barra de São Miguel.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;hugo new site my_website
-cd my_website
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;p&gt;O açude, que está situado na sub-bacia hidrográfica do Alto Paraíba, que juntamente com as sub-bacias do rio Taperoá e do Médio e Baixo Paraíba constituem a bacia hidrográfica do rio Paraíba, abrange uma área de 19.088,5 km², o que corresponde a 34% do território paraibano. Os 78 municípios inseridos nela abrigam uma população em torno de 1,8 milhão de habitantes, aproximadamente, 55% da população total do estado. Essas duas sub-bacias hidrográficas estão situadas em uma área de baixa pluviosidade, com médias anuais inferiores a 600 mm.&lt;/p&gt;
 
-&lt;li&gt;&lt;p&gt;Install Academic with &lt;a href=&#34;https://help.github.com/articles/set-up-git/&#34; target=&#34;_blank&#34;&gt;git&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Um estudo desenvolvido no início dos anos 2000 pela Companhia de Água e Esgotos da Paraíba (Cagepa) revelou que o volume hídrico acumulado no açude sofreu uma redução de 67,27% nos últimos 20 anos. Na época de sua construção, a capacidade de armazenamento do açude inicialmente era de 536 milhões de metros cúbicos, mas com o assoreamento essa capacidade foi reduzida para 436 milhões. A sua lâmina d’água abrange uma superfície em torno de 2.700 hectares. Nesse mesmo período, segundo dados da pesquisa, o número de ligações de água em prédios residenciais e comerciais em Campina Grande aumentou em 102,9%, as quais passaram de 40.298, em 1983, para 81.796, em 2003.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/gcushen/hugo-academic.git themes/academic
+&lt;p&gt;O clima de toda a região da bacia é tropical quente e seco, com máxima de 37 °Celsius e mínimas de 16 °C. A precipitação média na região é de 600 mm/ano, caracterizando-se um clima de semi-árido.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Fonte: https://pt.wikipedia.org/wiki/Açude_Boqueirão
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Or alternatively, &lt;a href=&#34;https://github.com/gcushen/hugo-academic/archive/master.zip&#34; target=&#34;_blank&#34;&gt;download Academic&lt;/a&gt; and extract it into a &lt;code&gt;themes/academic&lt;/code&gt; folder within your Hugo website.&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;Para mais informações sobre a atual crise hídrica, acesse essa visualização sobre o nosso açude:&lt;/p&gt;
 
+&lt;pre&gt;&lt;code&gt;https://olhonagua.insa.gov.br/#!/?id=12172&amp;amp;reservatorio=epitacio_pessoa
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(nela pode ser visto também a situação de outros reservatorios.)&lt;/p&gt;
+
+&lt;h1 id=&#34;bom-vamos-ao-que-interessa&#34;&gt;Bom vamos ao que interessa ?&lt;/h1&gt;
+
+&lt;p&gt;Vamos lá, viemos aqui para ver algumas visualizações sobre o açude Epitacio Pessoa, então abaixo estará listado 5 visualizações de dados
+usando gráficos tabulares e de todos os tipos, espero que aproveitem. &lt;em&gt;Lets Gooo!&lt;/em&gt;&lt;/p&gt;
+
+&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;If you are creating a new website, copy the contents of the &lt;code&gt;exampleSite&lt;/code&gt; folder to your website root folder, overwriting existing files if necessary. The &lt;code&gt;exampleSite&lt;/code&gt; folder contains an example config file and content to help you get started.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;cp -av themes/academic/exampleSite/* .

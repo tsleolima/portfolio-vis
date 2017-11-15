@@ -1,6 +1,6 @@
 baseurl = "https://tsleolima.gitub.io/visuInformacaoLab1/"  # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 title = "Léo Lima"
-copyright = "&copy; 2017 Your Name"
+copyright = "&copy; 2017 Leonardo Lima"
 theme = "hugo-academic"
 publishDir = "docs"
 enableEmoji = true
@@ -224,14 +224,9 @@ defaultContentLanguageInSubdir = false
 #   The weight parameter defines the order that the links will appear in.
 
 [[menu.main]]
-  name = "Inicio"
-  url = "#about"
-  weight = 1
-
-[[menu.main]]
-  name = "Publicações"
-  url = "#publications_selected"
-  weight = 2
+    name = "Inicio"
+    url = "#about"
+    weight = 1
 
 [[menu.main]]
   name = "Posts"
@@ -241,12 +236,12 @@ defaultContentLanguageInSubdir = false
 [[menu.main]]
   name = "Projetos"
   url = "#projects"
-  weight = 4
+  weight = 3
 
 [[menu.main]]
   name = "Contato"
   url = "#contact"
-  weight = 6
+  weight = 4
 
 # Taxonomies.
 [taxonomies]
@@ -258,5 +253,5 @@ defaultContentLanguageInSubdir = false
 #   Create a [languages.X] block for each language you want, where X is the language ID.
 
 # Configure the English version of the website.
-[Languages.en]
+[Languages.pt]
   languageCode = "en-us"
