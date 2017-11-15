@@ -40,24 +40,23 @@ defaultContentLanguageInSubdir = false
   font = "default"
 
   # Your details.
-  name = "Lena Smith"
-  role = "Professor of Artificial Intelligence"
+  name = "Léo Lima"
+  role = "Graduando em Ciência da Computação"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
   organizations = [ { name = "Universidade Federal de Campina Grande", url = "" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
-  avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "test@example.org"
-  address = "Building 1 Room 1, Stanford University, California, 90210, USA"
-  office_hours = "Monday 10:00 to 13:00 or email for appointment"
-  phone = "888 888 88 88"
-  skype = "echo123"
-  telegram = ""
+  avatar = "minhaFoto.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
+  email = "swordleolima@gmail.com"
+  address = "UFCG, Campina Grande - PB"
+  phone = "55 (83) 98760-6884"
+  skype = "swordleolima@hotmail.com"
+  # telegram = ""
 
   # Enable Keybase in Contact widget by entering your keybase.io username.
-  keybase = ""
+  # keybase = ""
 
   # Discussion link (e.g. link to a forum, mailing list, or chat).
   #   Uncomment line below to use.
@@ -65,7 +64,7 @@ defaultContentLanguageInSubdir = false
 
   # Diplay a logo in navigation bar rather than title (optional).
   #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
-  logo = ""
+  # logo = ""
 
   # Enable/disable map in Contact widget.
   # To show your address on a map in the contact widget, you need to enter your latitude, longitude and choose
@@ -206,22 +205,17 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "envelope"
     icon_pack = "fa"
-    link = "mailto:test@example.org"
+    link = "swordleolima@gmail.com"
 
   [[params.social]]
     icon = "twitter"
     icon_pack = "fa"
-    link = "//twitter.com/GeorgeCushen"
-
-  [[params.social]]
-    icon = "google-scholar"
-    icon_pack = "ai"
-    link = "https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ"
+    link = "//twitter.com/xMiraxe"
 
   [[params.social]]
     icon = "github"
     icon_pack = "fa"
-    link = "//github.com/gcushen"
+    link = "//github.com/tsleolima"
 
 
 # Navigation Links
@@ -230,12 +224,12 @@ defaultContentLanguageInSubdir = false
 #   The weight parameter defines the order that the links will appear in.
 
 [[menu.main]]
-  name = "Home"
+  name = "Inicio"
   url = "#about"
   weight = 1
 
 [[menu.main]]
-  name = "Publications"
+  name = "Publicações"
   url = "#publications_selected"
   weight = 2
 
@@ -245,12 +239,12 @@ defaultContentLanguageInSubdir = false
   weight = 2
 
 [[menu.main]]
-  name = "Projects"
+  name = "Projetos"
   url = "#projects"
   weight = 4
 
 [[menu.main]]
-  name = "Contact"
+  name = "Contato"
   url = "#contact"
   weight = 6
 
