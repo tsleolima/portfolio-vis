@@ -8,11 +8,6 @@ math = true
 summary = """
 5 visualizações sobre o açude açude epitácio pessoa - PB
 """
-
-[header]
-image = "headers/getting-started.png"
-caption = "Image credit: [**Academic**](https://github.com/gcushen/hugo-academic/)"
-
 +++
 
 # Como tudo começou
