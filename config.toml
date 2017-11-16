@@ -48,7 +48,7 @@ defaultContentLanguageInSubdir = false
   organizations = [ { name = "Universidade Federal de Campina Grande", url = "" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
-  avatar = "minhaFoto.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
+  avatar = "foto.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "swordleolima@gmail.com"
   address = "UFCG, Campina Grande - PB"
   phone = "55 (83) 98760-6884"
