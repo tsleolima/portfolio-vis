@@ -11,7 +11,6 @@ summary = """
 
 [header]
 image = "headers/visualizacaoDados.png"
-caption = "Image credit: [**Academic**](https://github.com/gcushen/hugo-academic/)"
 
 +++
 
