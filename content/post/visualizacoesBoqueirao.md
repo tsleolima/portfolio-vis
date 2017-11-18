@@ -6,7 +6,7 @@ tags = []
 title = "Minhas primeiras visualizações"
 math = true
 summary = """
-5 Visualizações sobre o açude açude epitácio pessoa - PB
+3 Visualizações sobre o açude açude epitácio pessoa - PB
 """
 
 [header]
@@ -42,7 +42,7 @@ Para mais informações sobre a atual crise hídrica, acesse essa visualização
 
 # Bom vamos ao que interessa ?
 
-Vamos lá, viemos aqui para ver algumas visualizações sobre o açude Epitacio Pessoa, então abaixo estará listado 5 visualizações de dados
+Vamos lá, viemos aqui para ver algumas visualizações sobre o açude Epitacio Pessoa, então abaixo estará listado 3 visualizações de dados
 usando gráficos tabulares e de todos os tipos, espero que aproveitem. *Lets Gooo!*
 
 1. A primeira visualização será com gráfico de área, a ideia por trás dele, é mostrar os anos em que o açude esteve com sua capacidade oscilando entre 200 e 300 milhões de volume hídrico.
