@@ -17,7 +17,7 @@ weight = 5
 
 # List your qualifications (such as academic degrees).
 [[education.courses]]
-  course = "Graduação em Ciência da Computação"
+  course = "Graduando em Ciência da Computação"
   institution = "UFCG - Campina Grande PB"
   year = 2016
 
