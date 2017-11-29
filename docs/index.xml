@@ -11,6 +11,99 @@
     <atom:link href="/visuInformacaoLab1/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Visualização usando D3</title>
+      <link>https://tsleolima.github.io/visuInformacaoLab1/post/viz-d3/</link>
+      <pubDate>Wed, 29 Nov 2017 14:40:02 -0300</pubDate>
+      
+      <guid>https://tsleolima.github.io/visuInformacaoLab1/post/viz-d3/</guid>
+      <description>&lt;script src=&#34;https://d3js.org/d3.v4.min.js&#34;&gt;&lt;/script&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&#34;&gt;
+&lt;div class=&#34;container&#34;&gt;
+  &lt;div class=&#34;row&#34;&gt;
+    &lt;h2&gt;Visualização usando D3&lt;/h2&gt;
+    &lt;p&gt;Aplicando elementos visuais para criação de uma visualização apartir dos dados do açude Epitácio Pessoa&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;row mychart&#34; id=&#34;chart&#34;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .mychart rect {
+    fill: steelblue;
+  }
+
+  .mychart rect:hover {
+    fill: red;
+  }
+
+  .mychart text {
+    font: 12px sans-serif;
+    text-anchor: left;
+  }
+&lt;/style&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  &#34;use strict&#34;
+
+  function desenhaBarras(dados) {
+
+    var larguraSVG = 700,
+        alturaSVG = 200;
+
+    var margin = {top: 50, right: 0, bottom: 50, left: 0}, // para descolar a vis das bordas do grafico
+            larguraVis = larguraSVG - margin.left - margin.right,
+            alturaVis = alturaSVG - margin.top - margin.bottom;
+
+    var x = d3.scaleBand()
+            .domain(dados.map((dado) =&gt; dado.mes))
+            .range([0,larguraVis])
+            .padding([1]);
+
+    var grafico = d3.select(&#39;#chart&#39;)
+      .append(&#39;svg&#39;)
+        .attr(&#39;width&#39;,larguraSVG)
+        .attr(&#39;height&#39;,alturaSVG)
+        .append(&#39;g&#39;)
+          .attr(&#39;transform&#39;, &#39;translate(&#39; + margin.left + &#39;,&#39; + margin.top + &#39;)&#39;);
+
+    &lt;!-- O circulo amarelo indica os dados em noventa_percentil --&gt;
+
+    grafico.selectAll(&#39;g&#39;)
+      .data(dados)
+      .enter()
+        .append(&#39;circle&#39;)
+          .attr(&#39;cx&#39;,dado =&gt; x(dado.mes))
+          .attr(&#39;cy&#39;,50)
+          .attr(&#39;r&#39;,dado =&gt; dado.noventa_percentil/4)
+          .attr(&#34;fill&#34;,&#39;yellow&#39;);
+
+    &lt;!-- O circulo em azul indica os dados em dez_percentil --&gt;
+
+    grafico.selectAll(&#39;g&#39;)
+      .data(dados)
+      .enter()
+        .append(&#39;circle&#39;)
+          .attr(&#39;cx&#39;,dado =&gt; x(dado.mes))
+          .attr(&#39;cy&#39;,50)
+          .attr(&#39;r&#39;, dado =&gt; dado.dez_percentil/4)
+          .attr(&#34;fill&#34;,&#39;blue&#39;);
+
+    grafico.append(&#34;g&#34;)
+      .attr(&#34;class&#34;, &#34;x axis&#34;)
+      .attr(&#34;transform&#34;, &#34;translate(0,&#34; + alturaVis + &#34;)&#34;)
+      .call(d3.axisBottom(x)); // magica do d3: gera eixo a partir da escala
+
+  }
+
+  d3.csv(&#39;https://raw.githubusercontent.com/tsleolima/intro-d3/master/dados/boqueirao-por-mes.csv&#39;, function(dados) {
+    desenhaBarras(dados);
+  });
+
+&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Minhas primeiras visualizações</title>
       <link>https://tsleolima.github.io/visuInformacaoLab1/post/visualizacoesboqueirao/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>

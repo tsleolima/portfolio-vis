@@ -25,6 +25,6 @@ weight = 5
 
 # Biografia
 
-Leonardo Felix, graduando em ciência da Computação na UFCG, em constante aprendizado e vontade em ingressar em projetos para alimentar sua sede por conhecimento.
+Leonardo Felix, graduando em ciência da Computação na UFCG, em constante aprendizado e vontade em ingressar em projetos para aumentar seus conhecimentos e se tornar um bom profissional no futuro.
 
 Bem-vindo(a) ao meu Site :)
