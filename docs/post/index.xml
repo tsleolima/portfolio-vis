@@ -11,89 +11,116 @@
     <atom:link href="/visuInformacaoLab1/post/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Laboratorio 4 - Visualização da Informação</title>
+      <title>Visualização de dados sobre o Bobs</title>
       <link>https://tsleolima.github.io/visuInformacaoLab1/post/lab-4/</link>
       <pubDate>Sun, 10 Dec 2017 16:55:39 -0300</pubDate>
       
       <guid>https://tsleolima.github.io/visuInformacaoLab1/post/lab-4/</guid>
-      <description>&lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
-.line {
-    fill: none;
-    stroke: #ffab00;
-    stroke-width: 3;
-}&lt;/p&gt;
+      <description>&lt;script src=&#34;https://d3js.org/d3.v4.min.js&#34;&gt;&lt;/script&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&#34;&gt;
+&lt;div class=&#34;container&#34;&gt;
+  &lt;div class=&#34;row&#34;&gt;
+    &lt;h2&gt;Uma visualização sobre o Bobs&lt;/h2&gt;
+    &lt;p&gt;Dessa vez, estou trazendo um visualização um pouco diferente das convencionais (Barras),a ideia é usar um gráfico linear,&lt;br&gt; ou também conhecido como line chart, para representar a grande quantidade de dados massivos, obtidos no entorno do açude velho,&lt;br&gt; situado em Campina Grande,Paraiba, afim de mostrar ao utilizadores dos serviços do Bobs, ou até mesmo do sistema de marketing da empresa,&lt;br&gt; os picos de horarios em que o local é mais frequentado.&lt;/p&gt;
 
-&lt;p&gt;.dot {
-    fill: #ffab00;
-    stroke: #fff;
-}&lt;/p&gt;
+    &lt;p&gt;No gráfico a seguir, foram utilizados o número de pedestres que passavam perto do Bobs, e então é feita um mapeamento do horario para a quantidade &lt;br&gt; de pessoas naquele horario.&lt;/p&gt;
 
-&lt;p&gt;&lt;/style&gt;
-&lt;body&gt;
-  &lt;div id=&#34;chart&#34;&gt;&lt;/div&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;row mychart&#34; id=&#34;chart&#34;&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;script type=&#34;text/javascript&#34;&gt;
-    &amp;ldquo;user strict&amp;rdquo;&lt;/p&gt;
+  &lt;p&gt;Podemos observar que o horario em que mais pessoas trafegam proximo ao Bobs é entorno de 17:00 e 19:30, caso essa pesquisa chegue &lt;br&gt; ao ouvidos do marketing do Bobs, pode ser feita alguma estrategia para atrair todas essa pessoas para o local, ou ate mesmo investir em horarios&lt;br&gt; ou refeições em que existe um pessoal relativamente menor que o mencionado, enfim, cabe ao marketing resolver.
 
-&lt;pre&gt;&lt;code&gt;function desenhaVisualizacao(dados){
+  &lt;p&gt;Nessa próxima visualização, temos um gráfico em radar, também conhecido como radar chart, nele vamos destacar mais 3 áreas movimentadas,&lt;br&gt; situadas também ao redor do açude velho.
 
-  var horariosBobs = dados.filter((dado) =&amp;gt; dado.local === &amp;quot;bobs&amp;quot;);
-  console.log(horariosBobs);
+  &lt;p&gt;&#34;Espaço para a proxima visualização&#34;
 
-  var margin = {top: 50, right: 50, bottom: 50, left: 50}
-    , width = window.innerWidth - margin.left - margin.right
-    , height = window.innerHeight - margin.top - margin.bottom;
+&lt;/div&gt;
 
-  var n = 59;
-  var horas = [&amp;quot;6&amp;quot;,&amp;quot;7&amp;quot;,&amp;quot;8&amp;quot;,&amp;quot;9&amp;quot;,&amp;quot;10&amp;quot;,&amp;quot;11&amp;quot;,&amp;quot;12&amp;quot;,&amp;quot;13&amp;quot;,&amp;quot;14&amp;quot;,&amp;quot;15&amp;quot;,&amp;quot;16&amp;quot;,&amp;quot;17&amp;quot;,&amp;quot;18&amp;quot;,&amp;quot;19&amp;quot;,&amp;quot;20&amp;quot;];
+&lt;style type=&#34;text/css&#34;&gt;
+  .line {
+      fill: none;
+      stroke: #ffab00;
+      stroke-width: 3;
+  }
 
-  var xScale = d3.scaleLinear()
-      .domain([0, n])
-      .range([0, width]);
+  .dot {
+      fill: #ffab00;
+      stroke: #fff;
+  }
 
-  var x = d3.scaleBand()
-    .domain(horas)
-    .range([-18, width]);
+  .row p{
+    padding: 10px;
+  }
 
-  var yScale = d3.scaleLinear()
-      .domain([0, 320])
-      .range([height, 0]);
+&lt;/style&gt;
+&lt;script type=&#34;text/javascript&#34;&gt;
+    &#34;user strict&#34;
 
-  var line = d3.line()
-      .x(function(d, i) { return xScale(i); })
-      .y(function(d) { return yScale(d.total_pedestres); })
-      .curve(d3.curveMonotoneX);
+    function desenhaVisualizacao(dados){
 
-  var svg = d3.select(&amp;quot;body&amp;quot;).append(&amp;quot;svg&amp;quot;)
-      .attr(&amp;quot;width&amp;quot;, width + margin.left + margin.right)
-      .attr(&amp;quot;height&amp;quot;, height + margin.top + margin.bottom)
-    .append(&amp;quot;g&amp;quot;)
-      .attr(&amp;quot;transform&amp;quot;, &amp;quot;translate(&amp;quot; + margin.left + &amp;quot;,&amp;quot; + margin.top + &amp;quot;)&amp;quot;);
+      var larguraSVG = 800,
+          alturaSVG = 500;
 
-  svg.append(&amp;quot;g&amp;quot;)
-      .attr(&amp;quot;class&amp;quot;, &amp;quot;x axis&amp;quot;)
-      .attr(&amp;quot;transform&amp;quot;, &amp;quot;translate(0,&amp;quot; + height + &amp;quot;)&amp;quot;)
-      .call(d3.axisBottom(x));
+      var horariosBobs = dados.filter((dado) =&gt; dado.local === &#34;bobs&#34;);
+      console.log(horariosBobs);
 
-  svg.append(&amp;quot;g&amp;quot;)
-      .attr(&amp;quot;class&amp;quot;, &amp;quot;y axis&amp;quot;)
-      .call(d3.axisLeft(yScale));
+      var margin = {top: 50, right: 50, bottom: 50, left: 50}
+        , width = larguraSVG - margin.left - margin.right
+        , height = alturaSVG - margin.top - margin.bottom;
 
-  svg.append(&amp;quot;path&amp;quot;)
-      .datum(horariosBobs)
-      .attr(&amp;quot;class&amp;quot;, &amp;quot;line&amp;quot;)
-      .attr(&amp;quot;d&amp;quot;, line);
+      var n = 59;
+      var horas = [&#34;6:00&#34;,&#34;7:00&#34;,&#34;8:00&#34;,&#34;9:00&#34;,&#34;10:00&#34;,&#34;11:00&#34;,&#34;12:00&#34;,&#34;13:00&#34;,&#34;14:00&#34;,&#34;15:00&#34;,&#34;16:00&#34;,&#34;17:00&#34;,&#34;18:00&#34;,&#34;19:00&#34;,&#34;20:00&#34;];
 
-}
+      var xScale = d3.scaleLinear()
+          .domain([0, n])
+          .range([0, width]);
 
-d3.csv(&amp;quot;dados/dados.csv&amp;quot;,function(dados){
-    desenhaVisualizacao(dados);
-});
-&lt;/code&gt;&lt;/pre&gt;
+      var x = d3.scaleBand()
+        .domain(horas)
+        .range([0, width]);
 
-&lt;p&gt;&lt;/script&gt;&lt;/p&gt;
+      var yScale = d3.scaleLinear()
+          .domain([0, 320])
+          .range([height, 0]);
 
-&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
+      var line = d3.line()
+          .x(function(d, i) { return xScale(i); })
+          .y(function(d) { return yScale(d.total_pedestres); })
+          .curve(d3.curveMonotoneX);
+
+      var svg = d3.select(&#34;#chart&#34;).append(&#34;svg&#34;)
+          .attr(&#34;width&#34;, width + margin.left + margin.right)
+          .attr(&#34;height&#34;, height + margin.top + margin.bottom)
+        .append(&#34;g&#34;)
+          .attr(&#34;transform&#34;, &#34;translate(&#34; + margin.left + &#34;,&#34; + margin.top + &#34;)&#34;);
+
+      svg.append(&#34;g&#34;)
+          .attr(&#34;class&#34;, &#34;x axis&#34;)
+          .attr(&#34;transform&#34;, &#34;translate(-22,&#34; + height + &#34;)&#34;)
+          .call(d3.axisBottom(x))
+          .select(&#34;.domain&#34;)
+            .remove();
+
+      svg.append(&#34;g&#34;)
+          .attr(&#34;class&#34;, &#34;y axis&#34;)
+          .call(d3.axisLeft(yScale));
+
+      svg.append(&#34;path&#34;)
+          .datum(horariosBobs)
+          .attr(&#34;class&#34;, &#34;line&#34;)
+          .attr(&#34;d&#34;, line);
+
+      svg.append(&#34;text&#34;)
+          .attr(&#34;transform&#34;, &#34;translate(20,&#34; + (height/100) + &#34;) rotate(0)&#34;)
+          .text(&#34;Número de pedestres&#34;);
+
+    }
+
+    d3.csv(&#34;https://raw.githubusercontent.com/luizaugustomm/pessoas-no-acude/master/dados/processados/dados.csv&#34;,function(dados){
+        desenhaVisualizacao(dados);
+    });
+
+  &lt;/script&gt;
 </description>
     </item>
     
@@ -110,8 +137,7 @@ d3.csv(&amp;quot;dados/dados.csv&amp;quot;,function(dados){
     &lt;h2&gt;Visualização usando D3&lt;/h2&gt;
     &lt;p&gt;Aplicando elementos visuais para criação de uma visualização apartir dos dados do açude Epitácio Pessoa&lt;/p&gt;
   &lt;/div&gt;
-  &lt;div class=&#34;row mychart&#34; id=&#34;chart&#34;&gt;
-  &lt;/div&gt;
+  &lt;div class=&#34;row mychart&#34; id=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;style&gt;

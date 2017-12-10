@@ -2,10 +2,11 @@
 title = "Visualização de dados sobre o Bobs"
 date = 2017-12-10T16:55:39-03:00
 draft = false
+tags = []
+categories = []
 summary = """
 Visualização usando dados do tráfego em torno do açude velho em Campina Grande, Paraiba.
 """
-
 
 [header]
 image = "headers/bobs.jpg"
