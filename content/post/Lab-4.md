@@ -1,5 +1,5 @@
 +++
-title = "Laboratorio 4 - Visualização da Informação"
+title = "Visualização de dados sobre o Bobs"
 date = 2017-12-10T16:55:39-03:00
 draft = false
 summary = """
@@ -8,7 +8,7 @@ Visualização usando dados do tráfego em torno do açude velho em Campina Gran
 
 
 [header]
-image = ""
+image = "headers/bobs.jpg"
 caption = ""
 preview = true
 
