@@ -9,7 +9,7 @@ Visualização com dados de boqueirão usando D3
 """
 
 [header]
-image = ""
+image = "headers/d3.jpg"
 caption = ""
 preview = true
 
@@ -22,8 +22,7 @@ preview = true
     <h2>Visualização usando D3</h2>
     <p>Aplicando elementos visuais para criação de uma visualização apartir dos dados do açude Epitácio Pessoa</p>
   </div>
-  <div class="row mychart" id="chart">
-  </div>
+  <div class="row mychart" id="chart"></div>
 </div>
 
 <style>

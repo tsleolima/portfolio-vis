@@ -11,6 +11,93 @@
     <atom:link href="/visuInformacaoLab1/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Laboratorio 4 - Visualização da Informação</title>
+      <link>https://tsleolima.github.io/visuInformacaoLab1/post/lab-4/</link>
+      <pubDate>Sun, 10 Dec 2017 16:55:39 -0300</pubDate>
+      
+      <guid>https://tsleolima.github.io/visuInformacaoLab1/post/lab-4/</guid>
+      <description>&lt;p&gt;&lt;style type=&#34;text/css&#34;&gt;
+.line {
+    fill: none;
+    stroke: #ffab00;
+    stroke-width: 3;
+}&lt;/p&gt;
+
+&lt;p&gt;.dot {
+    fill: #ffab00;
+    stroke: #fff;
+}&lt;/p&gt;
+
+&lt;p&gt;&lt;/style&gt;
+&lt;body&gt;
+  &lt;div id=&#34;chart&#34;&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&#34;text/javascript&#34;&gt;
+    &amp;ldquo;user strict&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function desenhaVisualizacao(dados){
+
+  var horariosBobs = dados.filter((dado) =&amp;gt; dado.local === &amp;quot;bobs&amp;quot;);
+  console.log(horariosBobs);
+
+  var margin = {top: 50, right: 50, bottom: 50, left: 50}
+    , width = window.innerWidth - margin.left - margin.right
+    , height = window.innerHeight - margin.top - margin.bottom;
+
+  var n = 59;
+  var horas = [&amp;quot;6&amp;quot;,&amp;quot;7&amp;quot;,&amp;quot;8&amp;quot;,&amp;quot;9&amp;quot;,&amp;quot;10&amp;quot;,&amp;quot;11&amp;quot;,&amp;quot;12&amp;quot;,&amp;quot;13&amp;quot;,&amp;quot;14&amp;quot;,&amp;quot;15&amp;quot;,&amp;quot;16&amp;quot;,&amp;quot;17&amp;quot;,&amp;quot;18&amp;quot;,&amp;quot;19&amp;quot;,&amp;quot;20&amp;quot;];
+
+  var xScale = d3.scaleLinear()
+      .domain([0, n])
+      .range([0, width]);
+
+  var x = d3.scaleBand()
+    .domain(horas)
+    .range([-18, width]);
+
+  var yScale = d3.scaleLinear()
+      .domain([0, 320])
+      .range([height, 0]);
+
+  var line = d3.line()
+      .x(function(d, i) { return xScale(i); })
+      .y(function(d) { return yScale(d.total_pedestres); })
+      .curve(d3.curveMonotoneX);
+
+  var svg = d3.select(&amp;quot;body&amp;quot;).append(&amp;quot;svg&amp;quot;)
+      .attr(&amp;quot;width&amp;quot;, width + margin.left + margin.right)
+      .attr(&amp;quot;height&amp;quot;, height + margin.top + margin.bottom)
+    .append(&amp;quot;g&amp;quot;)
+      .attr(&amp;quot;transform&amp;quot;, &amp;quot;translate(&amp;quot; + margin.left + &amp;quot;,&amp;quot; + margin.top + &amp;quot;)&amp;quot;);
+
+  svg.append(&amp;quot;g&amp;quot;)
+      .attr(&amp;quot;class&amp;quot;, &amp;quot;x axis&amp;quot;)
+      .attr(&amp;quot;transform&amp;quot;, &amp;quot;translate(0,&amp;quot; + height + &amp;quot;)&amp;quot;)
+      .call(d3.axisBottom(x));
+
+  svg.append(&amp;quot;g&amp;quot;)
+      .attr(&amp;quot;class&amp;quot;, &amp;quot;y axis&amp;quot;)
+      .call(d3.axisLeft(yScale));
+
+  svg.append(&amp;quot;path&amp;quot;)
+      .datum(horariosBobs)
+      .attr(&amp;quot;class&amp;quot;, &amp;quot;line&amp;quot;)
+      .attr(&amp;quot;d&amp;quot;, line);
+
+}
+
+d3.csv(&amp;quot;dados/dados.csv&amp;quot;,function(dados){
+    desenhaVisualizacao(dados);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Visualização usando D3</title>
       <link>https://tsleolima.github.io/visuInformacaoLab1/post/viz-d3/</link>
       <pubDate>Wed, 29 Nov 2017 14:40:02 -0300</pubDate>
@@ -119,7 +206,7 @@
 &lt;li&gt;Minha missão é passar para vocês algumas situações que enfrentamos no decorrer dos anos com o açude Epitácio Pessoa.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;h2&gt;&lt;/h2&gt;
 &lt;nav id=&#34;TableOfContents&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#como-tudo-começou&#34;&gt;Como tudo começou&lt;/a&gt;
