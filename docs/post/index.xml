@@ -11,6 +11,359 @@
     <atom:link href="/visuInformacaoLab1/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Visualização de Dados com Interação</title>
+      <link>https://tsleolima.github.io/visuInformacaoLab1/post/visuinteracao/</link>
+      <pubDate>Fri, 22 Dec 2017 17:21:06 -0300</pubDate>
+      
+      <guid>https://tsleolima.github.io/visuInformacaoLab1/post/visuinteracao/</guid>
+      <description>&lt;script src=&#34;https://d3js.org/d3.v4.min.js&#34;&gt;&lt;/script&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&#34;&gt;
+&lt;div class=&#34;container&#34;&gt;
+&lt;div class=&#34;row&#34;&gt;
+&lt;div class=&#34;col-md-8&#34;&gt;
+&lt;h2&gt;Uma visualização sobre o Bobs com interação&lt;/h2&gt;
+
+&lt;div class=&#34;col-md-12&#34;&gt;&lt;p&gt;Como foi abordado no outro posto sobre a visualização do bobs, com os dados obtidos do em torno do açude velho em Campina Grande, Paraiba, vemos aqui uma nova visualização, olhando bem aparenta ser a mesma utilizada anteriormente, mas esta possui algumas interções com o usuario, na qual tem uma finalidade de se extrair o dado com mais facilidade, ou flexibilidade.&lt;/p&gt;
+
+&lt;p&gt;Vamos para o gráfico, nessa nova versão do line chart, temos alguns botões e eventos com hover, ou seja, ao passarmos o mouse por cima das bolinhas que estão presentes na linha, vemos com detalhes a média dos pedestres que passavam no local naquele horario, mas, porque fazer isso, já que possuimos o eixo Y para nos retornar esse resultado ? Bem, a explicação é simples, dessa maneira vemos com precisão a média, e com mais facilidade, obviamente poderiamos colocar mais informações usando essa ferramenta (hover) tão importante, mas eu tive apenas essa no momento :(&lt;/p&gt;
+
+&lt;p&gt;Explicado como funcionam as bolinhas na nossa linha, vamos para os lindos botões azuis, neles podemos trocar os dados, ou mesmo, visualizar a nova linha para um novo local, também proximo do açudo velho, para ver em qual local, por exemplo,o tráfego de pessoas é maior naquele horario, enfim, existem n observações que podem ser feitas apartir desses dados, inclusive, retomando a ideia do marketing receber esses dados e aplicar em novas táticas de merchandising naquele horario é uma boa ideia!.&lt;/p&gt;
+&lt;h3&gt;&lt;p&gt;Espero que gostem!!!&lt;/p&gt;&lt;/h3&gt;  &lt;/div&gt;
+
+&lt;div class=&#34;row mychart&#34; id=&#34;chart&#34;&gt;&lt;/div&gt;
+
+
+&lt;div id=&#34;controls&#34;&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;tooltip&#34; class=&#34;hidden&#34;&gt;
+  &lt;p id=&#34;titulo_tooltip&#34;&gt; &lt;/p&gt;
+  &lt;p&gt; &lt;b id=&#34;value&#34;&gt;0&lt;/b&gt; &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;style type=&#34;text/css&#34;&gt;
+
+  .line {
+    fill: none;
+    stroke: #ffba49;
+    stroke-width: 3;
+  }
+
+  input{
+    margin-left: 60px;
+  }
+
+  .dot {
+    fill: #20a39e;
+    stroke: #fff;
+  }
+
+  rect {
+    fill: steelblue;
+  }
+
+  rect:hover {
+    fill: red;
+  }
+
+  text {
+    font: 12px sans-serif;
+    text-anchor: left;
+  }
+
+  .row p{
+    padding: 10px;
+  }
+
+  #tooltip {
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: #23001e;
+    border-radius: 10px;
+    box-shadow:5px 10px 18px #888888;
+}
+
+  #controls {
+    position: absolute;
+    width: auto;
+    height: auto;
+}
+
+  #tooltip.hidden {
+    display: none;
+}
+
+  #tooltip p {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+&lt;/style&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+&#34;user strict&#34;
+
+function desenhaVisualizacaoLinha(dados){
+
+  var horariosBobs = dados.filter((dado) =&gt; dado.local === &#34;bobs&#34;);
+
+  var margin = {top: 50, right: 50, bottom: 50, left: 50}
+  , width = 1000 - margin.left - margin.right
+  , height = 500 - margin.top - margin.bottom;
+
+  mediaBobs = fazMedia(horariosBobs);
+
+  var xScale = d3.scaleBand()
+  .domain(mediaBobs.map((dado,indice) =&gt; dado.horas))
+  .range([0, width])
+  .padding([1]);
+
+  var yScale = d3.scaleLinear()
+  .domain([0, 320])
+  .rangeRound([height, 0]);
+
+  var line = d3.line()
+  .x(function(d, i) { return xScale(d.horas); })
+  .y(function(d) { return yScale(d.media); })
+  .curve(d3.curveMonotoneX);
+
+  var svg = d3.select(&#34;#chart&#34;).append(&#34;svg&#34;)
+  .attr(&#34;width&#34;, width + margin.left + margin.right)
+  .attr(&#34;height&#34;, height + margin.top + margin.bottom)
+  .append(&#34;g&#34;)
+  .attr(&#34;transform&#34;, &#34;translate(&#34; + margin.left + &#34;,&#34; + margin.top + &#34;)&#34;);
+
+  svg.append(&#34;g&#34;)
+  .attr(&#34;class&#34;, &#34;x axis&#34;)
+  .attr(&#34;transform&#34;, &#34;translate(0,&#34; + height + &#34;)&#34;)
+  .call(d3.axisBottom(xScale))
+
+  svg.append(&#34;g&#34;)
+  .attr(&#34;class&#34;, &#34;y axis&#34;)
+  .call(d3.axisLeft(yScale));
+
+  svg.append(&#34;path&#34;)
+  .datum(mediaBobs)
+  .attr(&#34;class&#34;, &#34;line&#34;)
+  .attr(&#34;d&#34;, line);
+
+
+  svg.selectAll(&#34;.dot&#34;)
+  .data(mediaBobs)
+  .enter().append(&#34;circle&#34;) // Uses the enter().append() method
+  .attr(&#34;class&#34;, &#34;dot&#34;) // Assign a class for styling
+  .attr(&#34;cx&#34;, function(d, i) { return xScale(d.horas) })
+  .attr(&#34;cy&#34;, function(d) { return yScale(d.media) })
+  .attr(&#34;r&#34;, 5);
+
+  svg.selectAll(&#34;.dot&#34;).on(&#34;mouseover&#34;, mouseDentro);
+  function mouseDentro(d){
+
+    d3.select(&#34;#tooltip&#34;) // reparou que tem uma div escondida no html?
+    .style(&#34;left&#34;, (d3.event.pageX + 50) + &#34;px&#34;)
+    .style(&#34;top&#34;, (d3.event.pageY - 60) + &#34;px&#34;)
+    .select(&#34;#value&#34;)
+    .text(d.media);
+    d3.select(&#34;#tooltip #titulo_tooltip&#34;)
+    .text(&#34;Média de pedestres&#34;)
+    // Mostra o tooltip
+    d3.select(&#34;#tooltip&#34;).classed(&#34;hidden&#34;, false);
+  }
+
+  svg.selectAll(&#34;.dot&#34;).on(&#34;mouseout&#34;, mouseSaiu);
+  function mouseSaiu(d){
+    // não precisamos mais de tooltip
+    d3.select(&#34;#tooltip&#34;).classed(&#34;hidden&#34;, true);
+  }
+
+  // Os Botões
+
+  d3.select(&#34;#controls&#34;)
+  .append(&#34;input&#34;)
+  .attr(&#34;type&#34;,&#34;button&#34;)
+  .attr(&#34;value&#34;,&#34;Média Bobs&#34;)
+  .attr(&#34;class&#34;, &#34;btn btn-primary&#34;)
+  .on(&#34;click&#34;, mudaHorarioBobs)
+
+  d3.select(&#34;#controls&#34;)
+  .append(&#34;input&#34;)
+  .attr(&#34;type&#34;,&#34;button&#34;)
+  .attr(&#34;value&#34;,&#34;Média Jackson&#34;)
+  .attr(&#34;class&#34;, &#34;btn btn-primary&#34;)
+  .on(&#34;click&#34;, mudaHorarioJackson)
+
+  d3.select(&#34;#controls&#34;)
+  .append(&#34;input&#34;)
+  .attr(&#34;type&#34;,&#34;button&#34;)
+  .attr(&#34;value&#34;,&#34;Média Burrinhos&#34;)
+  .attr(&#34;class&#34;, &#34;btn btn-primary&#34;)
+  .on(&#34;click&#34;, mudaHorarioBurrinhos)
+
+
+  function mudaHorarioBobs(){
+    var horariosBobs = dados.filter((dado) =&gt; dado.local === &#34;bobs&#34;);
+    var mediaBobs = fazMedia(horariosBobs);
+
+    svg.select(&#34;.line&#34;)
+    .datum(mediaBobs)
+    .attr(&#34;class&#34;, &#34;line&#34;)
+    .attr(&#34;d&#34;, line)
+
+    svg.selectAll(&#34;circle&#34;).remove()
+
+    svg.selectAll(&#34;circle&#34;)
+    .data(mediaBobs)
+    .enter().append(&#34;circle&#34;) // Uses the enter().append() method
+    .attr(&#34;class&#34;, &#34;dot&#34;) // Assign a class for styling
+    .attr(&#34;cx&#34;, function(d, i) { return xScale(d.horas) })
+    .attr(&#34;cy&#34;, function(d) { return yScale(d.media) })
+    .attr(&#34;r&#34;, 5);
+
+    svg.selectAll(&#34;.dot&#34;).on(&#34;mouseover&#34;, mouseDentro);
+    function mouseDentro(d){
+
+      d3.select(&#34;#tooltip&#34;) // reparou que tem uma div escondida no html?
+      .style(&#34;left&#34;, (d3.event.pageX + 50) + &#34;px&#34;)
+      .style(&#34;top&#34;, (d3.event.pageY - 60) + &#34;px&#34;)
+      .select(&#34;#value&#34;)
+      .text(d.media);
+      d3.select(&#34;#tooltip #titulo_tooltip&#34;)
+      .text(&#34;Média de pedestres&#34;)
+      // Mostra o tooltip
+      d3.select(&#34;#tooltip&#34;).classed(&#34;hidden&#34;, false);
+    }
+
+    svg.selectAll(&#34;.dot&#34;).on(&#34;mouseout&#34;, mouseSaiu);
+    function mouseSaiu(d){
+      // não precisamos mais de tooltip
+      d3.select(&#34;#tooltip&#34;).classed(&#34;hidden&#34;, true);
+    }
+
+  }
+
+  function mudaHorarioJackson(){
+    var horariosJackson = dados.filter((dado) =&gt; dado.local === &#34;jackson&#34;);
+    var mediaJackson = fazMedia(horariosJackson);
+
+    svg.select(&#34;.line&#34;)
+    .datum(mediaJackson)
+    .attr(&#34;class&#34;, &#34;line&#34;)
+    .attr(&#34;d&#34;, line)
+
+    svg.selectAll(&#34;circle&#34;).remove()
+
+    svg.selectAll(&#34;circle&#34;)
+    .data(mediaJackson)
+    .enter().append(&#34;circle&#34;) // Uses the enter().append() method
+    .attr(&#34;class&#34;, &#34;dot&#34;) // Assign a class for styling
+    .attr(&#34;cx&#34;, function(d, i) { return xScale(d.horas) })
+    .attr(&#34;cy&#34;, function(d) { return yScale(d.media) })
+    .attr(&#34;r&#34;, 5);
+
+    svg.selectAll(&#34;.dot&#34;).on(&#34;mouseover&#34;, mouseDentro);
+    function mouseDentro(d){
+
+      d3.select(&#34;#tooltip&#34;) // reparou que tem uma div escondida no html?
+      .style(&#34;left&#34;, (d3.event.pageX + 50) + &#34;px&#34;)
+      .style(&#34;top&#34;, (d3.event.pageY - 60) + &#34;px&#34;)
+      .select(&#34;#value&#34;)
+      .text(d.media);
+      d3.select(&#34;#tooltip #titulo_tooltip&#34;)
+      .text(&#34;Média de pedestres&#34;)
+      // Mostra o tooltip
+      d3.select(&#34;#tooltip&#34;).classed(&#34;hidden&#34;, false);
+    }
+
+    svg.selectAll(&#34;.dot&#34;).on(&#34;mouseout&#34;, mouseSaiu);
+    function mouseSaiu(d){
+      // não precisamos mais de tooltip
+      d3.select(&#34;#tooltip&#34;).classed(&#34;hidden&#34;, true);
+    }
+
+  }
+
+  function mudaHorarioBurrinhos(){
+    var horariosBurrinhos = dados.filter((dado) =&gt; dado.local === &#34;burrinhos&#34;);
+    var mediaBurrinhos = fazMedia(horariosBurrinhos);
+
+    svg.select(&#34;.line&#34;)
+    .datum(mediaBurrinhos)
+    .attr(&#34;class&#34;, &#34;line&#34;)
+    .attr(&#34;d&#34;, line)
+
+    svg.selectAll(&#34;circle&#34;).remove()
+
+    svg.selectAll(&#34;circle&#34;)
+    .data(mediaBurrinhos)
+    .enter().append(&#34;circle&#34;) // Uses the enter().append() method
+    .attr(&#34;class&#34;, &#34;dot&#34;) // Assign a class for styling
+    .attr(&#34;cx&#34;, function(d, i) { return xScale(d.horas) })
+    .attr(&#34;cy&#34;, function(d) { return yScale(d.media) })
+    .attr(&#34;r&#34;, 5);
+
+    svg.selectAll(&#34;.dot&#34;).on(&#34;mouseover&#34;, mouseDentro);
+    function mouseDentro(d){
+
+      d3.select(&#34;#tooltip&#34;) // reparou que tem uma div escondida no html?
+      .style(&#34;left&#34;, (d3.event.pageX + 50) + &#34;px&#34;)
+      .style(&#34;top&#34;, (d3.event.pageY - 60) + &#34;px&#34;)
+      .select(&#34;#value&#34;)
+      .text(d.media);
+      d3.select(&#34;#tooltip #titulo_tooltip&#34;)
+      .text(&#34;Média de pedestres&#34;)
+      // Mostra o tooltip
+      d3.select(&#34;#tooltip&#34;).classed(&#34;hidden&#34;, false);
+    }
+
+    svg.selectAll(&#34;.dot&#34;).on(&#34;mouseout&#34;, mouseSaiu);
+    function mouseSaiu(d){
+      // não precisamos mais de tooltip
+      d3.select(&#34;#tooltip&#34;).classed(&#34;hidden&#34;, true);
+    }
+
+  }
+
+}
+d3.csv(&#34;https://raw.githubusercontent.com/luizaugustomm/pessoas-no-acude/master/dados/processados/dados.csv&#34;,function(dados){
+  desenhaVisualizacaoLinha(dados);
+  });
+
+  function fazMedia(dados){
+
+    var horas = [&#34;6:00&#34;,&#34;7:00&#34;,&#34;8:00&#34;,&#34;9:00&#34;,&#34;10:00&#34;,&#34;11:00&#34;,&#34;12:00&#34;,&#34;13:00&#34;,&#34;14:00&#34;,&#34;15:00&#34;,&#34;16:00&#34;,&#34;17:00&#34;,&#34;18:00&#34;,&#34;19:00&#34;,&#34;20:00&#34;];
+    var cont = 0;
+    var soma = 0;
+    var indice = 0;
+    var mediaHoras = [];
+    for (var i = 0; i &lt; dados.length; i++) {
+      if(cont == 4){
+        var media = soma / cont;
+        var objeto = {&#39;horas&#39;:horas[indice],media:media};
+        mediaHoras[indice] = objeto;
+        cont = 0;
+        soma = 0;
+        indice ++;
+      }
+      soma += parseInt(dados[i].total_pedestres);
+      cont ++;
+    }
+    return mediaHoras;
+  }
+
+  &lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Visualização de dados sobre o Bobs</title>
       <link>https://tsleolima.github.io/visuInformacaoLab1/post/lab-4/</link>
       <pubDate>Sun, 10 Dec 2017 16:55:39 -0300</pubDate>

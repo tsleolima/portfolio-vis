@@ -9,7 +9,7 @@ Visualização usando dados do tráfego em torno do açude velho em Campina Gran
 """
 
 [header]
-image = "headers/bobs.jpg"
+image = "headers/bobs.png"
 caption = ""
 preview = true
 

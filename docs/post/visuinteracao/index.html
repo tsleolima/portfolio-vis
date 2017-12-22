@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.31.1" />
+  <meta name="author" content="Léo Lima">
+  <meta name="description" content="Graduando em Ciência da Computação">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://tsleolima.github.io/visuInformacaoLab1/post/visuinteracao/">
+
+  
+  
+
+
+  
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/visuInformacaoLab1/styles.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="https://tsleolima.github.io/visuInformacaoLab1/index.xml" type="application/rss+xml" title="Léo Lima">
+  <link rel="feed" href="https://tsleolima.github.io/visuInformacaoLab1/index.xml" type="application/rss+xml" title="Léo Lima">
+  
+
+  <link rel="manifest" href="/visuInformacaoLab1/site.webmanifest">
+  <link rel="icon" type="image/png" href="/visuInformacaoLab1/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/visuInformacaoLab1/img/icon-192.png">
+
+  <link rel="canonical" href="https://tsleolima.github.io/visuInformacaoLab1/post/visuinteracao/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@xMiraxe">
+  <meta property="twitter:creator" content="@xMiraxe">
+  
+  <meta property="og:site_name" content="Léo Lima">
+  <meta property="og:url" content="https://tsleolima.github.io/visuInformacaoLab1/post/visuinteracao/">
+  <meta property="og:title" content="Visualização de Dados com Interação | Léo Lima">
+  <meta property="og:description" content=""><meta property="og:image" content="https://tsleolima.github.io/img/headers/bobsInteracao.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2017-12-22T17:21:06-03:00">
+  
+  <meta property="article:modified_time" content="2017-12-22T17:21:06-03:00">
+  
+
+  
+
+  <title>Visualização de Dados com Interação | Léo Lima</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Alterar navegação</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/visuInformacaoLab1/">Léo Lima</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/visuInformacaoLab1/#about">
+            
+            <span>Inicio</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/visuInformacaoLab1/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/visuInformacaoLab1/#projects">
+            
+            <span>Projetos</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/visuInformacaoLab1/#contact">
+            
+            <span>Contato</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+<div class="article-header">
+  <img src="/visuInformacaoLab1/img/headers/bobsInteracao.png" class="article-banner" itemprop="image">
+  
+</div>
+
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">Visualização de Dados com Interação</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2017-12-22 17:21:06 -0300 -03" itemprop="datePublished">
+      Dec 22, 2017
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Visualiza%c3%a7%c3%a3o%20de%20Dados%20com%20Intera%c3%a7%c3%a3o&amp;url=https%3a%2f%2ftsleolima.github.io%2fvisuInformacaoLab1%2fpost%2fvisuinteracao%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2ftsleolima.github.io%2fvisuInformacaoLab1%2fpost%2fvisuinteracao%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2ftsleolima.github.io%2fvisuInformacaoLab1%2fpost%2fvisuinteracao%2f&amp;title=Visualiza%c3%a7%c3%a3o%20de%20Dados%20com%20Intera%c3%a7%c3%a3o"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2ftsleolima.github.io%2fvisuInformacaoLab1%2fpost%2fvisuinteracao%2f&amp;title=Visualiza%c3%a7%c3%a3o%20de%20Dados%20com%20Intera%c3%a7%c3%a3o"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Visualiza%c3%a7%c3%a3o%20de%20Dados%20com%20Intera%c3%a7%c3%a3o&amp;body=https%3a%2f%2ftsleolima.github.io%2fvisuInformacaoLab1%2fpost%2fvisuinteracao%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<div class="container">
+<div class="row">
+<div class="col-md-8">
+<h2>Uma visualização sobre o Bobs com interação</h2>
+
+<div class="col-md-12"><p>Como foi abordado no outro posto sobre a visualização do bobs, com os dados obtidos do em torno do açude velho em Campina Grande, Paraiba, vemos aqui uma nova visualização, olhando bem aparenta ser a mesma utilizada anteriormente, mas esta possui algumas interções com o usuario, na qual tem uma finalidade de se extrair o dado com mais facilidade, ou flexibilidade.</p>
+
+<p>Vamos para o gráfico, nessa nova versão do line chart, temos alguns botões e eventos com hover, ou seja, ao passarmos o mouse por cima das bolinhas que estão presentes na linha, vemos com detalhes a média dos pedestres que passavam no local naquele horario, mas, porque fazer isso, já que possuimos o eixo Y para nos retornar esse resultado ? Bem, a explicação é simples, dessa maneira vemos com precisão a média, e com mais facilidade, obviamente poderiamos colocar mais informações usando essa ferramenta (hover) tão importante, mas eu tive apenas essa no momento :(</p>
+
+<p>Explicado como funcionam as bolinhas na nossa linha, vamos para os lindos botões azuis, neles podemos trocar os dados, ou mesmo, visualizar a nova linha para um novo local, também proximo do açudo velho, para ver em qual local, por exemplo,o tráfego de pessoas é maior naquele horario, enfim, existem n observações que podem ser feitas apartir desses dados, inclusive, retomando a ideia do marketing receber esses dados e aplicar em novas táticas de merchandising naquele horario é uma boa ideia!.</p>
+<h3><p>Espero que gostem!!!</p></h3>  </div>
+
+<div class="row mychart" id="chart"></div>
+
+
+<div id="controls"></div>
+
+</div>
+</div>
+</div>
+
+<div id="tooltip" class="hidden">
+  <p id="titulo_tooltip"> </p>
+  <p> <b id="value">0</b> </p>
+</div>
+
+<style type="text/css">
+
+  .line {
+    fill: none;
+    stroke: #ffba49;
+    stroke-width: 3;
+  }
+
+  input{
+    margin-left: 60px;
+  }
+
+  .dot {
+    fill: #20a39e;
+    stroke: #fff;
+  }
+
+  rect {
+    fill: steelblue;
+  }
+
+  rect:hover {
+    fill: red;
+  }
+
+  text {
+    font: 12px sans-serif;
+    text-anchor: left;
+  }
+
+  .row p{
+    padding: 10px;
+  }
+
+  #tooltip {
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: #23001e;
+    border-radius: 10px;
+    box-shadow:5px 10px 18px #888888;
+}
+
+  #controls {
+    position: absolute;
+    width: auto;
+    height: auto;
+}
+
+  #tooltip.hidden {
+    display: none;
+}
+
+  #tooltip p {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+</style>
+
+<script type="text/javascript">
+"user strict"
+
+function desenhaVisualizacaoLinha(dados){
+
+  var horariosBobs = dados.filter((dado) => dado.local === "bobs");
+
+  var margin = {top: 50, right: 50, bottom: 50, left: 50}
+  , width = 1000 - margin.left - margin.right
+  , height = 500 - margin.top - margin.bottom;
+
+  mediaBobs = fazMedia(horariosBobs);
+
+  var xScale = d3.scaleBand()
+  .domain(mediaBobs.map((dado,indice) => dado.horas))
+  .range([0, width])
+  .padding([1]);
+
+  var yScale = d3.scaleLinear()
+  .domain([0, 320])
+  .rangeRound([height, 0]);
+
+  var line = d3.line()
+  .x(function(d, i) { return xScale(d.horas); })
+  .y(function(d) { return yScale(d.media); })
+  .curve(d3.curveMonotoneX);
+
+  var svg = d3.select("#chart").append("svg")
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  svg.append("g")
+  .attr("class", "x axis")
+  .attr("transform", "translate(0," + height + ")")
+  .call(d3.axisBottom(xScale))
+
+  svg.append("g")
+  .attr("class", "y axis")
+  .call(d3.axisLeft(yScale));
+
+  svg.append("path")
+  .datum(mediaBobs)
+  .attr("class", "line")
+  .attr("d", line);
+
+
+  svg.selectAll(".dot")
+  .data(mediaBobs)
+  .enter().append("circle") // Uses the enter().append() method
+  .attr("class", "dot") // Assign a class for styling
+  .attr("cx", function(d, i) { return xScale(d.horas) })
+  .attr("cy", function(d) { return yScale(d.media) })
+  .attr("r", 5);
+
+  svg.selectAll(".dot").on("mouseover", mouseDentro);
+  function mouseDentro(d){
+
+    d3.select("#tooltip") // reparou que tem uma div escondida no html?
+    .style("left", (d3.event.pageX + 50) + "px")
+    .style("top", (d3.event.pageY - 60) + "px")
+    .select("#value")
+    .text(d.media);
+    d3.select("#tooltip #titulo_tooltip")
+    .text("Média de pedestres")
+    // Mostra o tooltip
+    d3.select("#tooltip").classed("hidden", false);
+  }
+
+  svg.selectAll(".dot").on("mouseout", mouseSaiu);
+  function mouseSaiu(d){
+    // não precisamos mais de tooltip
+    d3.select("#tooltip").classed("hidden", true);
+  }
+
+  // Os Botões
+
+  d3.select("#controls")
+  .append("input")
+  .attr("type","button")
+  .attr("value","Média Bobs")
+  .attr("class", "btn btn-primary")
+  .on("click", mudaHorarioBobs)
+
+  d3.select("#controls")
+  .append("input")
+  .attr("type","button")
+  .attr("value","Média Jackson")
+  .attr("class", "btn btn-primary")
+  .on("click", mudaHorarioJackson)
+
+  d3.select("#controls")
+  .append("input")
+  .attr("type","button")
+  .attr("value","Média Burrinhos")
+  .attr("class", "btn btn-primary")
+  .on("click", mudaHorarioBurrinhos)
+
+
+  function mudaHorarioBobs(){
+    var horariosBobs = dados.filter((dado) => dado.local === "bobs");
+    var mediaBobs = fazMedia(horariosBobs);
+
+    svg.select(".line")
+    .datum(mediaBobs)
+    .attr("class", "line")
+    .attr("d", line)
+
+    svg.selectAll("circle").remove()
+
+    svg.selectAll("circle")
+    .data(mediaBobs)
+    .enter().append("circle") // Uses the enter().append() method
+    .attr("class", "dot") // Assign a class for styling
+    .attr("cx", function(d, i) { return xScale(d.horas) })
+    .attr("cy", function(d) { return yScale(d.media) })
+    .attr("r", 5);
+
+    svg.selectAll(".dot").on("mouseover", mouseDentro);
+    function mouseDentro(d){
+
+      d3.select("#tooltip") // reparou que tem uma div escondida no html?
+      .style("left", (d3.event.pageX + 50) + "px")
+      .style("top", (d3.event.pageY - 60) + "px")
+      .select("#value")
+      .text(d.media);
+      d3.select("#tooltip #titulo_tooltip")
+      .text("Média de pedestres")
+      // Mostra o tooltip
+      d3.select("#tooltip").classed("hidden", false);
+    }
+
+    svg.selectAll(".dot").on("mouseout", mouseSaiu);
+    function mouseSaiu(d){
+      // não precisamos mais de tooltip
+      d3.select("#tooltip").classed("hidden", true);
+    }
+
+  }
+
+  function mudaHorarioJackson(){
+    var horariosJackson = dados.filter((dado) => dado.local === "jackson");
+    var mediaJackson = fazMedia(horariosJackson);
+
+    svg.select(".line")
+    .datum(mediaJackson)
+    .attr("class", "line")
+    .attr("d", line)
+
+    svg.selectAll("circle").remove()
+
+    svg.selectAll("circle")
+    .data(mediaJackson)
+    .enter().append("circle") // Uses the enter().append() method
+    .attr("class", "dot") // Assign a class for styling
+    .attr("cx", function(d, i) { return xScale(d.horas) })
+    .attr("cy", function(d) { return yScale(d.media) })
+    .attr("r", 5);
+
+    svg.selectAll(".dot").on("mouseover", mouseDentro);
+    function mouseDentro(d){
+
+      d3.select("#tooltip") // reparou que tem uma div escondida no html?
+      .style("left", (d3.event.pageX + 50) + "px")
+      .style("top", (d3.event.pageY - 60) + "px")
+      .select("#value")
+      .text(d.media);
+      d3.select("#tooltip #titulo_tooltip")
+      .text("Média de pedestres")
+      // Mostra o tooltip
+      d3.select("#tooltip").classed("hidden", false);
+    }
+
+    svg.selectAll(".dot").on("mouseout", mouseSaiu);
+    function mouseSaiu(d){
+      // não precisamos mais de tooltip
+      d3.select("#tooltip").classed("hidden", true);
+    }
+
+  }
+
+  function mudaHorarioBurrinhos(){
+    var horariosBurrinhos = dados.filter((dado) => dado.local === "burrinhos");
+    var mediaBurrinhos = fazMedia(horariosBurrinhos);
+
+    svg.select(".line")
+    .datum(mediaBurrinhos)
+    .attr("class", "line")
+    .attr("d", line)
+
+    svg.selectAll("circle").remove()
+
+    svg.selectAll("circle")
+    .data(mediaBurrinhos)
+    .enter().append("circle") // Uses the enter().append() method
+    .attr("class", "dot") // Assign a class for styling
+    .attr("cx", function(d, i) { return xScale(d.horas) })
+    .attr("cy", function(d) { return yScale(d.media) })
+    .attr("r", 5);
+
+    svg.selectAll(".dot").on("mouseover", mouseDentro);
+    function mouseDentro(d){
+
+      d3.select("#tooltip") // reparou que tem uma div escondida no html?
+      .style("left", (d3.event.pageX + 50) + "px")
+      .style("top", (d3.event.pageY - 60) + "px")
+      .select("#value")
+      .text(d.media);
+      d3.select("#tooltip #titulo_tooltip")
+      .text("Média de pedestres")
+      // Mostra o tooltip
+      d3.select("#tooltip").classed("hidden", false);
+    }
+
+    svg.selectAll(".dot").on("mouseout", mouseSaiu);
+    function mouseSaiu(d){
+      // não precisamos mais de tooltip
+      d3.select("#tooltip").classed("hidden", true);
+    }
+
+  }
+
+}
+d3.csv("https://raw.githubusercontent.com/luizaugustomm/pessoas-no-acude/master/dados/processados/dados.csv",function(dados){
+  desenhaVisualizacaoLinha(dados);
+  });
+
+  function fazMedia(dados){
+
+    var horas = ["6:00","7:00","8:00","9:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00"];
+    var cont = 0;
+    var soma = 0;
+    var indice = 0;
+    var mediaHoras = [];
+    for (var i = 0; i < dados.length; i++) {
+      if(cont == 4){
+        var media = soma / cont;
+        var objeto = {'horas':horas[indice],media:media};
+        mediaHoras[indice] = objeto;
+        cont = 0;
+        soma = 0;
+        indice ++;
+      }
+      soma += parseInt(dados[i].total_pedestres);
+      cont ++;
+    }
+    return mediaHoras;
+  }
+
+  </script>
+
+      </div>
+
+      
+
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+
+
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Leonardo Lima &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> 
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> 
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    
+    <script src="/visuInformacaoLab1/js/hugo-academic.js"></script>
+    
+
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+
