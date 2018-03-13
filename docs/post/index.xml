@@ -2,42 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Léo Lima</title>
-    <link>https://tsleolima.github.io/visuInformacaoLab1/post/</link>
+    <link>https://tsleolima.github.io/portfolio-vis/post/</link>
     <description>Recent content in Posts on Léo Lima</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Leonardo Lima</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0300</lastBuildDate>
     
-	<atom:link href="https://tsleolima.github.io/visuInformacaoLab1/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tsleolima.github.io/portfolio-vis/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>LabRedes</title>
-      <link>https://tsleolima.github.io/visuInformacaoLab1/post/labredes/</link>
+      <link>https://tsleolima.github.io/portfolio-vis/post/labredes/</link>
       <pubDate>Mon, 12 Mar 2018 21:48:58 -0300</pubDate>
       
-      <guid>https://tsleolima.github.io/visuInformacaoLab1/post/labredes/</guid>
+      <guid>https://tsleolima.github.io/portfolio-vis/post/labredes/</guid>
       <description>Bem vindos novamente a outro post, espero que estejam aqui para aprender mais uma vez sobre algo relacionado a visualização de dados usando nossa velha amiga D3, e bem, se você caiu de paraquedas aqui, meu caro amigo leitor, não se intimide, continue lendo e brinque com a visualização 😄.
 Bem, a ideia é trazer para vocês algum dado sobre o gráfico logo abaixo, mas vou fazer diferente hoje, dessa vez, vou dar as diretivas para vocês irem buscar como fazer a de vocês mesmos 😉.</description>
     </item>
     
     <item>
       <title>Visualização de Dados com Interação</title>
-      <link>https://tsleolima.github.io/visuInformacaoLab1/post/visuinteracao/</link>
+      <link>https://tsleolima.github.io/portfolio-vis/post/visuinteracao/</link>
       <pubDate>Fri, 22 Dec 2017 17:21:06 -0300</pubDate>
       
-      <guid>https://tsleolima.github.io/visuInformacaoLab1/post/visuinteracao/</guid>
+      <guid>https://tsleolima.github.io/portfolio-vis/post/visuinteracao/</guid>
       <description>Uma visualização sobre o Bobs com interação Como foi abordado no outro post sobre a visualização do bobs, com os dados obtidos do em torno do açude velho em Campina Grande, Paraiba, vemos aqui uma nova visualização, olhando bem aparenta ser a mesma utilizada anteriormente, mas esta possui algumas interações com o usuario, na qual tem uma finalidade de se extrair o dado com mais facilidade, ou flexibilidade.
 Vamos para o gráfico, nessa nova versão do line chart, temos alguns botões e eventos com hover, ou seja, ao passarmos o mouse por cima das bolinhas que estão presentes na linha, vemos com detalhes a média dos pedestres que passavam no local naquele horario, mas, porque fazer isso, já que possuimos o eixo Y para nos retornar esse resultado ?</description>
     </item>
     
     <item>
       <title>Visualização de dados sobre o Bobs</title>
-      <link>https://tsleolima.github.io/visuInformacaoLab1/post/lab-4/</link>
+      <link>https://tsleolima.github.io/portfolio-vis/post/lab-4/</link>
       <pubDate>Sun, 10 Dec 2017 16:55:39 -0300</pubDate>
       
-      <guid>https://tsleolima.github.io/visuInformacaoLab1/post/lab-4/</guid>
+      <guid>https://tsleolima.github.io/portfolio-vis/post/lab-4/</guid>
       <description>Uma visualização sobre o Bobs Dessa vez, estou trazendo um visualização um pouco diferente das convencionais (Barras),a ideia é usar um gráfico linear,
 ou também conhecido como line chart, para representar a grande quantidade de dados massivos, obtidos no entorno do açude velho,
 situado em Campina Grande,Paraiba, afim de mostrar ao utilizadores dos serviços do Bobs, ou até mesmo do sistema de marketing da empresa,
@@ -46,20 +46,20 @@ os picos de horarios em que o local é mais frequentado.</description>
     
     <item>
       <title>Visualização usando D3</title>
-      <link>https://tsleolima.github.io/visuInformacaoLab1/post/viz-d3/</link>
+      <link>https://tsleolima.github.io/portfolio-vis/post/viz-d3/</link>
       <pubDate>Wed, 29 Nov 2017 14:40:02 -0300</pubDate>
       
-      <guid>https://tsleolima.github.io/visuInformacaoLab1/post/viz-d3/</guid>
+      <guid>https://tsleolima.github.io/portfolio-vis/post/viz-d3/</guid>
       <description>Visualização usando D3 Aplicando elementos visuais para criação de uma visualização apartir dos dados do açude Epitácio Pessoa
     .mychart rect { fill: steelblue; } .mychart rect:hover { fill: red; } .mychart text { font: 12px sans-serif; text-anchor: left; }  &#34;use strict&#34; function desenhaBarras(dados) { var larguraSVG = 700, alturaSVG = 200; var margin = {top: 50, right: 0, bottom: 50, left: 0}, // para descolar a vis das bordas do grafico larguraVis = larguraSVG - margin.</description>
     </item>
     
     <item>
       <title>Minhas primeiras visualizações</title>
-      <link>https://tsleolima.github.io/visuInformacaoLab1/post/visualizacoesboqueirao/</link>
+      <link>https://tsleolima.github.io/portfolio-vis/post/visualizacoesboqueirao/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
       
-      <guid>https://tsleolima.github.io/visuInformacaoLab1/post/visualizacoesboqueirao/</guid>
+      <guid>https://tsleolima.github.io/portfolio-vis/post/visualizacoesboqueirao/</guid>
       <description>Como tudo começou  Primeiro de tudo, eu sou péssimo com ideias de visualizações de Dados ( isso foi para ser engraçado). Esse é um laboratorio para universidade e quem sabe alguem aproveite esses dados em um futuro. Minha missão é passar para vocês algumas situações que enfrentamos no decorrer dos anos com o açude Epitácio Pessoa.    Como tudo começou  Historia sobre o açude Epitácio Pessoa.</description>
     </item>
     

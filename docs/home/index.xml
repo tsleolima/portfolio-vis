@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homes on Léo Lima</title>
-    <link>https://tsleolima.github.io/visuInformacaoLab1/home/</link>
+    <link>https://tsleolima.github.io/portfolio-vis/home/</link>
     <description>Recent content in Homes on Léo Lima</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Leonardo Lima</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://tsleolima.github.io/visuInformacaoLab1/home/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tsleolima.github.io/portfolio-vis/home/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://tsleolima.github.io/visuInformacaoLab1/home/about/</link>
+      <link>https://tsleolima.github.io/portfolio-vis/home/about/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://tsleolima.github.io/visuInformacaoLab1/home/about/</guid>
+      <guid>https://tsleolima.github.io/portfolio-vis/home/about/</guid>
       <description>Biografia Leonardo Felix, graduando em ciência da Computação na UFCG, em constante aprendizado e disposição para aumentar seus conhecimentos e se tornar um excelente profissional no futuro.
 Bem-vindo(a) ao meu Site :)</description>
     </item>
     
     <item>
       <title>Postagens Recentes</title>
-      <link>https://tsleolima.github.io/visuInformacaoLab1/home/posts/</link>
+      <link>https://tsleolima.github.io/portfolio-vis/home/posts/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://tsleolima.github.io/visuInformacaoLab1/home/posts/</guid>
+      <guid>https://tsleolima.github.io/portfolio-vis/home/posts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contatos</title>
-      <link>https://tsleolima.github.io/visuInformacaoLab1/home/contact/</link>
+      <link>https://tsleolima.github.io/portfolio-vis/home/contact/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://tsleolima.github.io/visuInformacaoLab1/home/contact/</guid>
+      <guid>https://tsleolima.github.io/portfolio-vis/home/contact/</guid>
       <description></description>
     </item>
     

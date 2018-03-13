@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Léo Lima on Léo Lima</title>
-    <link>https://tsleolima.github.io/visuInformacaoLab1/</link>
+    <link>https://tsleolima.github.io/portfolio-vis/</link>
     <description>Recent content in Léo Lima on Léo Lima</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Leonardo Lima</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/visuInformacaoLab1/" rel="self" type="application/rss+xml" />
+    <atom:link href="/portfolio-vis/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>LabRedes</title>
-      <link>https://tsleolima.github.io/visuInformacaoLab1/post/labredes/</link>
+      <link>https://tsleolima.github.io/portfolio-vis/post/labredes/</link>
       <pubDate>Mon, 12 Mar 2018 21:48:58 -0300</pubDate>
       
-      <guid>https://tsleolima.github.io/visuInformacaoLab1/post/labredes/</guid>
+      <guid>https://tsleolima.github.io/portfolio-vis/post/labredes/</guid>
       <description>&lt;p&gt;Bem vindos novamente a outro post, espero que estejam aqui para aprender mais uma vez sobre algo relacionado a visualização de dados usando nossa velha amiga D3, e bem, se você caiu de paraquedas aqui, meu caro amigo leitor, não se intimide, continue lendo e brinque com a visualização 😄.&lt;/p&gt;
 
 &lt;p&gt;Bem, a ideia é trazer para vocês algum dado sobre o gráfico logo abaixo, mas vou fazer diferente hoje, dessa vez, vou dar as diretivas para vocês irem buscar como fazer a de vocês mesmos 😉.&lt;/p&gt;
@@ -662,10 +662,10 @@ Based on https://bitbucket.org/taynaud/python-louvain/overview
     
     <item>
       <title>Visualização de Dados com Interação</title>
-      <link>https://tsleolima.github.io/visuInformacaoLab1/post/visuinteracao/</link>
+      <link>https://tsleolima.github.io/portfolio-vis/post/visuinteracao/</link>
       <pubDate>Fri, 22 Dec 2017 17:21:06 -0300</pubDate>
       
-      <guid>https://tsleolima.github.io/visuInformacaoLab1/post/visuinteracao/</guid>
+      <guid>https://tsleolima.github.io/portfolio-vis/post/visuinteracao/</guid>
       <description>&lt;script src=&#34;https://d3js.org/d3.v4.min.js&#34;&gt;&lt;/script&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&#34;&gt;
 &lt;div class=&#34;container&#34;&gt;
@@ -1015,10 +1015,10 @@ d3.csv(&#34;https://raw.githubusercontent.com/luizaugustomm/pessoas-no-acude/mas
     
     <item>
       <title>Visualização de dados sobre o Bobs</title>
-      <link>https://tsleolima.github.io/visuInformacaoLab1/post/lab-4/</link>
+      <link>https://tsleolima.github.io/portfolio-vis/post/lab-4/</link>
       <pubDate>Sun, 10 Dec 2017 16:55:39 -0300</pubDate>
       
-      <guid>https://tsleolima.github.io/visuInformacaoLab1/post/lab-4/</guid>
+      <guid>https://tsleolima.github.io/portfolio-vis/post/lab-4/</guid>
       <description>&lt;script src=&#34;https://d3js.org/d3.v4.min.js&#34;&gt;&lt;/script&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&#34;&gt;
 &lt;div class=&#34;container&#34;&gt;
@@ -1266,10 +1266,10 @@ text {
     
     <item>
       <title>Visualização usando D3</title>
-      <link>https://tsleolima.github.io/visuInformacaoLab1/post/viz-d3/</link>
+      <link>https://tsleolima.github.io/portfolio-vis/post/viz-d3/</link>
       <pubDate>Wed, 29 Nov 2017 14:40:02 -0300</pubDate>
       
-      <guid>https://tsleolima.github.io/visuInformacaoLab1/post/viz-d3/</guid>
+      <guid>https://tsleolima.github.io/portfolio-vis/post/viz-d3/</guid>
       <description>&lt;script src=&#34;https://d3js.org/d3.v4.min.js&#34;&gt;&lt;/script&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css&#34;&gt;
 &lt;div class=&#34;container&#34;&gt;
@@ -1358,10 +1358,10 @@ text {
     
     <item>
       <title>Minhas primeiras visualizações</title>
-      <link>https://tsleolima.github.io/visuInformacaoLab1/post/visualizacoesboqueirao/</link>
+      <link>https://tsleolima.github.io/portfolio-vis/post/visualizacoesboqueirao/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
       
-      <guid>https://tsleolima.github.io/visuInformacaoLab1/post/visualizacoesboqueirao/</guid>
+      <guid>https://tsleolima.github.io/portfolio-vis/post/visualizacoesboqueirao/</guid>
       <description>
 
 &lt;h1 id=&#34;como-tudo-começou&#34;&gt;Como tudo começou&lt;/h1&gt;
