@@ -6,9 +6,659 @@
     <description>Recent content in Léo Lima on Léo Lima</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2017 Leonardo Lima</copyright>
+    <copyright>&amp;copy; 2018 Leonardo Lima</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="/visuInformacaoLab1/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>LabRedes</title>
+      <link>https://tsleolima.github.io/visuInformacaoLab1/post/labredes/</link>
+      <pubDate>Mon, 12 Mar 2018 21:48:58 -0300</pubDate>
+      
+      <guid>https://tsleolima.github.io/visuInformacaoLab1/post/labredes/</guid>
+      <description>&lt;p&gt;Bem vindos novamente a outro post, espero que estejam aqui para aprender mais uma vez sobre algo relacionado a visualização de dados usando nossa velha amiga D3, e bem, se você caiu de paraquedas aqui, meu caro amigo leitor, não se intimide, continue lendo e brinque com a visualização 😄.&lt;/p&gt;
+
+&lt;p&gt;Bem, a ideia é trazer para vocês algum dado sobre o gráfico logo abaixo, mas vou fazer diferente hoje, dessa vez, vou dar as diretivas para vocês irem buscar como fazer a de vocês mesmos 😉.&lt;/p&gt;
+
+&lt;p&gt;Como eu disse, para quem caiu aqui de paraquedas, aconselho estudar um pouco sobre javascript,d3,html, mas não fique triste, a internet está ai aberta para conseguirmos aprender tudo isso, então, não desistam 💪.&lt;/p&gt;
+
+&lt;p&gt;Assumindo que vocês camaradas, já possuem certos dominios em criação de visualizações através da ferramenta &amp;lsquo;D3&amp;rsquo;, irei dar-lhes um exemplo de como é representado um nó e suas arestas,&lt;/p&gt;
+
+&lt;p&gt;Podemos representar um nó dessa maneira:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    var node_data = [&#39;id1&#39;, &#39;id2&#39;, &#39;id3&#39;]; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;e nossas arestas dessa maneira:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    var edge_data = [
+        {source: &#39;id1&#39;, target:&#39;id2&#39;, weight: 10.0},
+        {source: &#39;id2&#39;, target:&#39;id3&#39;, weight: 20.0}, 
+        {source: &#39;id3&#39;, target:&#39;id1&#39;, weight: 30.0}
+    ];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Por motivos de hora, não posso explicar detalhadamente, entretanto, é aconselhavel seguir esse padrão, para irmos até o proximo passo.&lt;/p&gt;
+
+&lt;p&gt;Bem, um dos meus maiores desejos desde o dia em que me foi apresentado esse tipo de visualização, era a de detectar clusters ou agrupamentos de nós e separa-los por cores, afim de descobrir alguma informação através dessa visualização, mas nossos amigos que trabalham com Grafos em si, já descobriram isso para nós, e podemos usar algoritmos que realizam essas operações para conseguirmos extrair essas informações ou até mesmo aproveitar a vista, como estão fazendo os que cairam de paraquedas aqui 😁.
+Buscando na internet com meu professor, descobrimos que existe um script já desenvolvido para isso, chamado jLouvain, e essas formas de representação de nós e arestas estavam no git dos responsaveis a qual deixarei logo abaixo, mas vou dizer para vocês, não foi facil associar a API do Spotify com os artistas semelhantes ao Nando Reis ( escolhi por ser muito fã, e por outros motivos que supostamente vocẽs devem desconfiar 💜, sim, é amor 😌)
+Então deixarei aqui, apenas o link da API do Spotify.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    https://developer.spotify.com/web-api/get-related-artists/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lá vocês encontraram detalhadamente pela própria equipe do Spotify, como usar esses dados, lembrando que essas dados são em redes, visto que temos indicações do Spotify quando estamos procurando algum artista, então, é sugerido que o sistema nos indique artistas com sons semelhante ao qual nos estamos escutando, não é verdade ? 👍&lt;/p&gt;
+
+&lt;p&gt;Bem, as dificuldades que senti ao formar esses clusters mesmo usando o script do jLouvain&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    https://github.com/upphiminn/jLouvain
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Foi em como o json recebido pela api do spotify tinha inumeras informações a mais, e tanta informação assim, as vezes, deixa você meio Lélé da cuca, então busquei por projetos no&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    https://bl.ocks.org/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Aconselho a todos irem lá e desfrutarem de tantas criações legais e divertidas, que podemos usar em inumeros dados, da forma como quisermos, além de ter todo o codigo aberto para entendermos a ideia.&lt;/p&gt;
+
+&lt;p&gt;O fato é que nessas pesquisas, encontrei esse link:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    https://bl.ocks.org/micahstubbs/3f439df92579c5bb2902fab15742ba87
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Foi aqui que minha dor de cabeça passou, mas eu primeiro tive que entender como era necessario passar o json para o nosso amigo script jLouvain, e foi ai que as ideias viram, mas para não dar rodeios e ir direto ao ponto, voces precisam atentar para as linhas do &amp;lsquo;vis.js&amp;rsquo;, onde se diz&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    var nodeData = nodes.map(function (d) {return d.id});
+    var linkData = links.map(function (d) {return {source: d.source, target: d.target,      weight: d.weight}; });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;isso era oque eu precisava, usar os dados que foram carregados, e filtra-los para usar apenas os dados em que o jLouvain irá utilizar, exatamente aqui;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    var community = jLouvain()
+        .nodes(nodeData)
+        .edges(linkData);
+
+    var result  = community();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Mas, não precisamos usar os dados filtrados na nossa visualização, pois lá possuem varios dados importantissimos para a leitura da mesma, como o Label, então usamos outra variavel para dessa forma, criar os circulos referentes aos nós, e os links referentes as arestas da nossa visualização, deixarei aqui a mudança que fiz para que os label fossem usados na nossa visualização e pudessemos identificar quais artistas pertences aos clusters formados, clusters esses que se afastam um dos outros, é lindo de se ver.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    circles.append(&amp;quot;title&amp;quot;)
+        .text(function (d) { return d.label; });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bem, sei que vocês querem ver como ficou, então aqui está:&lt;/p&gt;
+
+&lt;div id=&#34;chart&#34;&gt;&lt;/div&gt;
+
+&lt;p&gt;Espero que tenham gostado, depois eu passo aqui e coloco mais alguma coisinha nova pra vocês, fiquem bem, se alimentem, e nunca esqueçam de seus cafés, Certo ???&lt;/p&gt;
+
+&lt;p&gt;Abs: Léo. 😌&lt;/p&gt;
+
+&lt;script src=&#39;//d3js.org/d3.v4.min.js&#39;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+    /* global d3 */
+
+d3.json(&#39;https://raw.githubusercontent.com/tsleolima/lab-redes/master/artistasSemelhantesNandoReis.json&#39;, (error, graph) =&gt; {
+    if (error) throw error;
+    const nodes = graph.nodes;
+    const links = graph.edges;
+
+    const width = 1000;
+    const height = 1000;
+
+    // separation between same-color circles
+    const padding = 9; // 1.5
+
+    // separation between different-color circles
+    const clusterPadding = 48; // 6
+
+    const maxRadius = 12;
+
+    const z = d3.scaleOrdinal(d3.schemeCategory20);
+
+    // total number of nodes
+    const n = nodes.length;
+
+    // detect communities with jsLouvain
+    var nodeData = nodes.map(function (d) { return d.id });
+    var linkData = links.map(function (d) { return { source: d.source, target: d.target }; });
+
+    var community = jLouvain()
+        .nodes(nodeData)
+        .edges(linkData);
+
+    var result = community();
+
+    const defaultRadius = 8;
+    nodes.forEach(function (node) {
+        node.r = defaultRadius;
+        node.cluster = result[node.id]
+    });
+
+    // collect clusters from nodes
+    const clusters = {};
+    nodes.forEach((node) =&gt; {
+        const radius = node.r;
+        const clusterID = node.cluster;
+        if (!clusters[clusterID] || (radius &gt; clusters[clusterID].r)) {
+            clusters[clusterID] = node;
+        }
+    });
+
+    var svg = d3.select(&#34;#chart&#34;)
+    .append(&#34;svg&#34;)
+    .attr(&#39;version&#39;, &#39;1.1&#39;)
+    .attr(&#39;viewBox&#39;, &#39;0 0 &#39; + width + &#39; &#39; + height)
+    .attr(&#39;width&#39;, &#39;100%&#39;);
+
+    let link = svg.selectAll(&#39;line&#39;)
+        .data(graph.edges)
+        .enter().append(&#39;line&#39;);
+
+    link
+        .attr(&#39;class&#39;, &#39;link&#39;)
+        .style(&#39;stroke&#39;, &#39;darkgray&#39;)
+        .style(&#39;stroke-width&#39;, &#39;0.2px&#39;);
+
+    const circles = svg.append(&#39;g&#39;)
+        .datum(nodes)
+        .selectAll(&#39;.circle&#39;)
+        .data(d =&gt; d)
+        .enter().append(&#39;circle&#39;)
+        .attr(&#39;r&#39;, d =&gt; d.r)
+        .attr(&#39;fill&#39;, d =&gt; z(d.cluster))
+        .attr(&#39;stroke&#39;, &#39;black&#39;)
+        .attr(&#39;stroke-width&#39;, 1)
+        .call(d3.drag()
+            .on(&#34;start&#34;, dragstarted)
+            .on(&#34;drag&#34;, dragged)
+            .on(&#34;end&#34;, dragended)
+        );
+
+    circles.append(&#34;title&#34;)
+        .text(function (d) { return d.label; });
+
+    const simulation = d3.forceSimulation()
+        .nodes(nodes)
+        .force(&#39;link&#39;, d3.forceLink().id(d =&gt; d.id))
+        .force(&#34;charge&#34;, d3.forceManyBody())
+        .force(&#34;center&#34;, d3.forceCenter(width / 2, height / 2))
+        // .velocityDecay(0.2)
+        .force(&#39;x&#39;, d3.forceX().strength(0.0005))
+        .force(&#39;y&#39;, d3.forceY().strength(0.0005))
+        .force(&#39;collide&#39;, collide)
+        .force(&#39;cluster&#39;, clustering)
+        .on(&#39;tick&#39;, ticked);
+
+    simulation.force(&#39;link&#39;)
+        .links(graph.edges)
+        // .distance([85]);
+
+    function ticked() {
+        link
+            .attr(&#39;x1&#39;, d =&gt; d.source.x)
+            .attr(&#39;y1&#39;, d =&gt; d.source.y)
+            .attr(&#39;x2&#39;, d =&gt; d.target.x)
+            .attr(&#39;y2&#39;, d =&gt; d.target.y);
+
+        circles
+            .attr(&#39;cx&#39;, d =&gt; d.x)
+            .attr(&#39;cy&#39;, d =&gt; d.y);
+    }
+
+    function dragstarted(d) {
+        if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+    }
+
+    function dragged(d) {
+        d.fx = d3.event.x;
+        d.fy = d3.event.y;
+    }
+
+    function dragended(d) {
+        if (!d3.event.active) simulation.alphaTarget(0);
+        d.fx = null;
+        d.fy = null;
+    }
+
+    // These are implementations of the custom forces
+    function clustering(alpha) {
+        nodes.forEach((d) =&gt; {
+            const cluster = clusters[d.cluster];
+            if (cluster === d) return;
+            let x = d.x - cluster.x;
+            let y = d.y - cluster.y;
+            let l = Math.sqrt((x * x) + (y * y));
+            const r = d.r + cluster.r;
+            if (l !== r) {
+                l = ((l - r) / l) * alpha;
+                d.x -= x *= l;
+                d.y -= y *= l;
+                cluster.x += x;
+                cluster.y += y;
+            }
+        });
+    }
+
+    function collide(alpha) {
+        const quadtree = d3.quadtree()
+            .x(d =&gt; d.x)
+            .y(d =&gt; d.y)
+            .addAll(nodes);
+
+        nodes.forEach((d) =&gt; {
+            const r = d.r + maxRadius + Math.max(padding, clusterPadding);
+            const nx1 = d.x - r;
+            const nx2 = d.x + r;
+            const ny1 = d.y - r;
+            const ny2 = d.y + r;
+            quadtree.visit((quad, x1, y1, x2, y2) =&gt; {
+                if (quad.data &amp;&amp; (quad.data !== d)) {
+                    let x = d.x - quad.data.x;
+                    let y = d.y - quad.data.y;
+                    let l = Math.sqrt((x * x) + (y * y));
+                    const r = d.r + quad.data.r + (d.cluster === quad.data.cluster ? padding : clusterPadding);
+                    if (l &lt; r) {
+                        l = ((l - r) / l) * alpha;
+                        d.x -= x *= l;
+                        d.y -= y *= l;
+                        quad.data.x += x;
+                        quad.data.y += y;
+                    }
+                }
+                return x1 &gt; nx2 || x2 &lt; nx1 || y1 &gt; ny2 || y2 &lt; ny1;
+            });
+        });
+    }
+    
+
+});
+&lt;/script&gt;
+
+&lt;script&gt;
+    /*
+Author: Corneliu S. (github.com/upphiminn)
+
+This is a javascript implementation of the Louvain
+community detection algorithm (http://arxiv.org/abs/0803.0476)
+Based on https://bitbucket.org/taynaud/python-louvain/overview
+
+*/
+(function(){
+    jLouvain = function(){
+        //Constants
+        var __PASS_MAX = -1
+        var __MIN    = 0.0000001
+
+        //Local vars
+        var original_graph_nodes;
+        var original_graph_edges;
+        var original_graph = {};
+        var partition_init;
+
+        //Helpers
+        function make_set(array){
+            var set = {};
+            array.forEach(function(d,i){
+                set[d] = true;
+            });
+            return Object.keys(set);
+        };
+
+        function obj_values(obj){
+             var vals = [];
+             for( var key in obj ) {
+                 if ( obj.hasOwnProperty(key) ) {
+                     vals.push(obj[key]);
+                 }
+             }
+             return vals;
+        };
+
+        function get_degree_for_node(graph, node){
+            var neighbours = graph._assoc_mat[node] ? Object.keys(graph._assoc_mat[node]) : [];
+            var weight = 0;
+            neighbours.forEach(function(neighbour,i){
+                var value = graph._assoc_mat[node][neighbour] || 1;
+                if(node == neighbour)
+                    value *= 2;
+                weight += value;
+            });
+            return weight;
+        };
+
+        function get_neighbours_of_node(graph, node){
+            if(typeof graph._assoc_mat[node] == &#39;undefined&#39;)
+                return [];
+
+            var neighbours = Object.keys(graph._assoc_mat[node]);
+            return neighbours;
+        }
+
+        function get_edge_weight(graph, node1, node2){
+            return graph._assoc_mat[node1] ? graph._assoc_mat[node1][node2] : undefined;
+        }
+
+        function get_graph_size(graph){
+            var size = 0;
+            graph.edges.forEach(function(edge){
+                size += edge.weight;
+            });
+            return size;
+        }
+
+        function add_edge_to_graph(graph, edge){
+            update_assoc_mat(graph, edge);
+
+            var edge_index = graph.edges.map(function(d){
+                return d.source+&#39;_&#39;+d.target;
+            }).indexOf(edge.source+&#39;_&#39;+edge.target);
+
+            if(edge_index != -1)
+                graph.edges[edge_index].weight = edge.weight;
+            else
+                graph.edges.push(edge);
+        }
+
+        function make_assoc_mat(edge_list){
+            var mat = {};
+            edge_list.forEach(function(edge, i){
+                mat[edge.source] = mat[edge.source] || {};
+                mat[edge.source][edge.target] = edge.weight;
+                mat[edge.target] = mat[edge.target] || {};
+                mat[edge.target][edge.source] = edge.weight;
+            });
+
+            return mat;
+        }
+
+        function update_assoc_mat(graph, edge){
+            graph._assoc_mat[edge.source] = graph._assoc_mat[edge.source] || {};
+            graph._assoc_mat[edge.source][edge.target] = edge.weight;
+            graph._assoc_mat[edge.target] = graph._assoc_mat[edge.target] || {};
+            graph._assoc_mat[edge.target][edge.source] = edge.weight;
+        }
+
+        function clone(obj){
+            if(obj == null || typeof(obj) != &#39;object&#39;)
+                return obj;
+
+            var temp = obj.constructor();
+
+            for(var key in obj)
+                temp[key] = clone(obj[key]);
+            return temp;
+        }
+
+        //Core-Algorithm Related
+        function init_status(graph, status, part){
+            status[&#39;nodes_to_com&#39;] = {};
+            status[&#39;total_weight&#39;] = 0;
+            status[&#39;internals&#39;] = {};
+            status[&#39;degrees&#39;] = {};
+            status[&#39;gdegrees&#39;] = {};
+            status[&#39;loops&#39;] = {};
+            status[&#39;total_weight&#39;] = get_graph_size(graph);
+
+            if(typeof part == &#39;undefined&#39;){
+                graph.nodes.forEach(function(node,i){
+                    status.nodes_to_com[node] = i;
+                    var deg = get_degree_for_node(graph, node);
+                    if (deg &lt; 0)
+                        throw &#39;Bad graph type, use positive weights!&#39;;
+                    status.degrees[i] = deg;
+                    status.gdegrees[node] = deg;
+                    status.loops[node] = get_edge_weight(graph, node, node) || 0;
+                    status.internals[i] = status.loops[node];
+                });
+            }else{
+                graph.nodes.forEach(function(node,i){
+                    var com = part[node];
+                    status.nodes_to_com[node] = com;
+                    var deg = get_degree_for_node(graph, node);
+                    status.degrees[com] = (status.degrees[com] || 0) + deg;
+                    status.gdegrees[node] = deg;
+                    var inc = 0.0;
+
+                    var neighbours  = get_neighbours_of_node(graph, node);
+                    neighbours.forEach(function(neighbour, i){
+                        var weight = graph._assoc_mat[node][neighbour];
+                        if (weight &lt;= 0){
+                            throw &#34;Bad graph type, use positive weights&#34;;
+                        }
+
+                        if(part[neighbour] == com){
+                            if (neighbour == node){
+                                inc += weight;
+                            }else{
+                                inc += weight/2.0;
+                            }
+                        }
+                    });
+                    status.internals[com] = (status.internals[com] || 0) + inc;
+                });
+            }
+        }
+
+        function __modularity(status){
+            var links = status.total_weight;
+            var result = 0.0;
+            var communities = make_set(obj_values(status.nodes_to_com));
+
+            communities.forEach(function(com,i){
+                var in_degree = status.internals[com] || 0 ;
+                var degree = status.degrees[com] || 0 ;
+                if(links &gt; 0){
+                    result = result + in_degree / links - Math.pow((degree / (2.0*links)), 2);
+                }
+            });
+            return result;
+        }
+
+        function __neighcom(node, graph, status){
+            // compute the communities in the neighb. of the node, with the graph given by
+            // node_to_com
+
+            var weights = {};
+            var neighboorhood = get_neighbours_of_node(graph, node);//make iterable;
+
+            neighboorhood.forEach(function(neighbour, i){
+                if(neighbour != node){
+                    var weight = graph._assoc_mat[node][neighbour] || 1; 
+                    var neighbourcom = status.nodes_to_com[neighbour];
+                    weights[neighbourcom] = (weights[neighbourcom] || 0) + weight;
+                }   
+            });
+
+            return weights;
+        }
+
+        function __insert(node, com, weight, status){
+            //insert node into com and modify status
+            status.nodes_to_com[node] = +com;
+            status.degrees[com] = (status.degrees[com] || 0) + (status.gdegrees[node]||0);
+            status.internals[com] = (status.internals[com] || 0) + weight + (status.loops[node]||0);
+        }
+
+        function __remove(node, com, weight, status){
+            //remove node from com and modify status
+            status.degrees[com] = ((status.degrees[com] || 0) - (status.gdegrees[node] || 0));
+            status.internals[com] = ((status.internals[com] || 0) - weight -(status.loops[node] ||0));
+            status.nodes_to_com[node] = -1;
+        }
+
+        function __renumber(dict){
+            var count = 0;
+            var ret = clone(dict); //deep copy :)
+            var new_values = {};
+            var dict_keys = Object.keys(dict);
+            dict_keys.forEach(function(key){
+                var value = dict[key];
+                var new_value =  typeof new_values[value] ==&#39;undefined&#39; ? -1 : new_values[value];
+                if(new_value == -1){
+                    new_values[value] = count;
+                    new_value = count;
+                    count = count + 1;
+                }
+                ret[key] = new_value;
+            });
+            return ret;
+        }
+
+        function __one_level(graph, status){
+            //Compute one level of the Communities Dendogram.
+            var modif = true,
+                nb_pass_done = 0,
+                cur_mod = __modularity(status),
+                new_mod = cur_mod;
+
+            while (modif &amp;&amp; nb_pass_done != __PASS_MAX){
+                cur_mod = new_mod;
+                modif = false;
+                nb_pass_done += 1
+
+                graph.nodes.forEach(function(node,i){
+                    var com_node = status.nodes_to_com[node];
+                    var degc_totw = (status.gdegrees[node] || 0) / (status.total_weight * 2.0);
+                    var neigh_communities = __neighcom(node, graph, status);
+                    __remove(node, com_node, (neigh_communities[com_node] || 0.0), status);
+                    var best_com = com_node;
+                    var best_increase = 0;
+                    var neigh_communities_entries = Object.keys(neigh_communities);//make iterable;
+
+                    neigh_communities_entries.forEach(function(com,i){
+                        var incr = neigh_communities[com] - (status.degrees[com] || 0.0) * degc_totw;
+                        if (incr &gt; best_increase){
+                            best_increase = incr;
+                            best_com = com;
+                        }
+                    });
+
+                    __insert(node, best_com, neigh_communities[best_com] || 0, status);
+
+                    if(best_com != com_node)
+                        modif = true;
+                });
+                new_mod = __modularity(status);
+                if(new_mod - cur_mod &lt; __MIN)
+                    break;
+            }
+        }
+
+        function induced_graph(partition, graph){
+            var ret = {nodes:[], edges:[], _assoc_mat: {}};
+            var w_prec, weight;
+            //add nodes from partition values
+            var partition_values = obj_values(partition);
+            ret.nodes = ret.nodes.concat(make_set(partition_values)); //make set
+            graph.edges.forEach(function(edge,i){
+                weight = edge.weight || 1;
+                var com1 = partition[edge.source];
+                var com2 = partition[edge.target];
+                w_prec = (get_edge_weight(ret, com1, com2) || 0); 
+                var new_weight = (w_prec + weight);
+                add_edge_to_graph(ret, {&#39;source&#39;: com1, &#39;target&#39;: com2, &#39;weight&#39;: new_weight});
+            });
+            return ret;
+        }
+
+        function partition_at_level(dendogram, level){
+            var partition = clone(dendogram[0]);
+            for(var i = 1; i &lt; level + 1; i++ )
+                Object.keys(partition).forEach(function(key,j){
+                    var node = key;
+                    var com  = partition[key];
+                    partition[node] = dendogram[i][com];
+                });
+            return partition;
+        }
+
+
+        function generate_dendogram(graph, part_init){
+
+            if(graph.edges.length == 0){
+                var part = {};
+                graph.nodes.forEach(function(node,i){
+                    part[node] = node;
+                });
+                return part;
+            }
+            var status = {};
+
+            init_status(original_graph, status, part_init);
+            var mod = __modularity(status);
+            var status_list = [];
+            __one_level(original_graph, status);
+            var new_mod = __modularity(status);
+            var partition = __renumber(status.nodes_to_com);
+            status_list.push(partition);
+            mod = new_mod;
+            var current_graph = induced_graph(partition, original_graph);
+            init_status(current_graph, status);
+
+            while (true){
+                __one_level(current_graph, status);
+                new_mod = __modularity(status);
+                if(new_mod - mod &lt; __MIN)
+                    break;
+
+                partition = __renumber(status.nodes_to_com);
+                status_list.push(partition); 
+
+                mod = new_mod;
+                current_graph = induced_graph(partition, current_graph);
+                init_status(current_graph, status);
+            }
+
+            return status_list; 
+        }
+
+        var core = function(){
+            var status = {};
+            var dendogram = generate_dendogram(original_graph, partition_init);
+            return partition_at_level(dendogram, dendogram.length - 1);
+        };
+
+        core.nodes = function(nds){
+            if(arguments.length &gt; 0){
+                original_graph_nodes = nds;
+            }
+            return core;
+        };
+
+        core.edges = function(edgs){
+            if(typeof original_graph_nodes == &#39;undefined&#39;)
+                throw &#39;Please provide the graph nodes first!&#39;;
+
+            if(arguments.length &gt; 0){
+                original_graph_edges = edgs;
+                var assoc_mat = make_assoc_mat(edgs);
+                original_graph = { &#39;nodes&#39;: original_graph_nodes,
+                                   &#39;edges&#39;: original_graph_edges,
+                                   &#39;_assoc_mat&#39;: assoc_mat };
+            }
+            return core;
+
+        };
+
+        core.partition_init = function(prttn){
+            if(arguments.length &gt; 0){
+                partition_init = prttn;
+            }
+            return core;
+        };
+
+        return core;
+    }
+})();
+
+&lt;/script&gt;
+</description>
+    </item>
     
     <item>
       <title>Visualização de Dados com Interação</title>

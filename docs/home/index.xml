@@ -6,9 +6,39 @@
     <description>Recent content in Homes on Léo Lima</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2017 Leonardo Lima</copyright>
+    <copyright>&amp;copy; 2018 Leonardo Lima</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/visuInformacaoLab1/home/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://tsleolima.github.io/visuInformacaoLab1/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://tsleolima.github.io/visuInformacaoLab1/home/about/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://tsleolima.github.io/visuInformacaoLab1/home/about/</guid>
+      <description>Biografia Leonardo Felix, graduando em ciência da Computação na UFCG, em constante aprendizado e disposição para aumentar seus conhecimentos e se tornar um excelente profissional no futuro.
+Bem-vindo(a) ao meu Site :)</description>
+    </item>
+    
+    <item>
+      <title>Postagens Recentes</title>
+      <link>https://tsleolima.github.io/visuInformacaoLab1/home/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://tsleolima.github.io/visuInformacaoLab1/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contatos</title>
+      <link>https://tsleolima.github.io/visuInformacaoLab1/home/contact/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://tsleolima.github.io/visuInformacaoLab1/home/contact/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

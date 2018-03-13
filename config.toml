@@ -1,6 +1,6 @@
 baseurl = "https://tsleolima.github.io/visuInformacaoLab1/"  # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 title = "Léo Lima"
-copyright = "&copy; 2017 Leonardo Lima"
+copyright = "&copy; 2018 Leonardo Lima"
 theme = "hugo-academic"
 publishDir = "docs"
 enableEmoji = true
@@ -45,7 +45,7 @@ defaultContentLanguageInSubdir = false
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name="Universidade Federal de Campina Grande", url="" } ]
+  organizations = [ ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "foto.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
@@ -232,11 +232,6 @@ defaultContentLanguageInSubdir = false
   name = "Posts"
   url = "#posts"
   weight = 2
-
-[[menu.main]]
-  name = "Projetos"
-  url = "#projects"
-  weight = 3
 
 [[menu.main]]
   name = "Contato"
