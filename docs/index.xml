@@ -16,14 +16,10 @@
       <pubDate>Fri, 16 Mar 2018 22:35:55 -0300</pubDate>
       
       <guid>https://tsleolima.github.io/portfolio-vis/post/meutop50/</guid>
-      <description>&lt;p&gt;Olá a todos, dessa vez estou dando uma passadinha rápida para mostrar-los uma nova visualização com os meus dados do spotify, eu espero que gostem, daqui alguns dias tentarei se possivel trazer uma interação para esse tipo de visualização, onde vocês veram seus &amp;ldquo;tops 50 spotify artists&amp;rdquo; 😜, no mesmo formato que esse aqui de baixo, espero que gostem e deixem seu Like 👍, hahaha 😂.&lt;/p&gt;
+      <description>&lt;p&gt;Olá a todos, dessa vez estou dando uma passadinha rápida para mostrar a vocês uma nova visualização com os meus dados do spotify, eu espero que gostem, daqui alguns dias tentarei se possivel trazer uma interação para esse tipo de visualização, onde vocês veram seus &amp;ldquo;tops 50 spotify artists&amp;rdquo; 😜, no mesmo formato que esse aqui de baixo, espero que gostem e deixem seu Like 👍, hahaha 😂.&lt;/p&gt;
 
-&lt;!-- &lt;link rel=&#34;stylesheet&#34; href=&#34;style.css&#34;&gt; --&gt;
-
-&lt;p&gt;&lt;body&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.rawgit.com/tsleolima/portfolio-vis/ed55de71/content/meuTop50js/css/style.css&#34;&gt;
 &lt;!-- Main --&gt;
-
 &lt;div id=&#34;main&#34;&gt;
     &lt;div class=&#34;box container&#34;&gt;
         &lt;section&gt;
@@ -42,18 +38,20 @@
             &lt;/svg&gt;
         &lt;/section&gt;
     &lt;/div&gt;
-&lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    Créditos ao criador: https://github.com/ss1993/my-spotify-top50
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;!-- Scripts --&gt;
 
-&lt;script src=&#34;http://cdn.rawgit.com/tsleolima/portfolio-vis/master/content/meuTop50js/js/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://cdn.rawgit.com/tsleolima/portfolio-vis/master/content/meuTop50js/js/skel.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://cdn.rawgit.com/tsleolima/portfolio-vis/master/content/meuTop50js/js/util.js&#34;&gt;&lt;/script&gt;
-&lt;!--[if lte IE 8]&gt;&lt;script src=&#34;assets/js/ie/respond.min.js&#34;&gt;&lt;/script&gt;&lt;![endif]--&gt;
-&lt;script src=&#34;http://cdn.rawgit.com/tsleolima/portfolio-vis/master/content/meuTop50js/js/main.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.rawgit.com/tsleolima/portfolio-vis/ed55de71/content/meuTop50js/js/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.rawgit.com/tsleolima/portfolio-vis/ed55de71/content/meuTop50js/js/skel.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.rawgit.com/tsleolima/portfolio-vis/ed55de71/content/meuTop50js/js/util.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.rawgit.com/tsleolima/portfolio-vis/ed55de71/content/meuTop50js/js/main.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://d3js.org/d3.v4.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://cdn.rawgit.com/tsleolima/portfolio-vis/master/content/meuTop50js/js/music_graph.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.rawgit.com/tsleolima/portfolio-vis/ed55de71/content/meuTop50js/js/music_graph.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
