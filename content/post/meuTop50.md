@@ -25,7 +25,7 @@ preview = true
 
 Olá a todos, dessa vez estou dando uma passadinha rápida para mostrar-los uma nova visualização com os meus dados do spotify, eu espero que gostem, daqui alguns dias tentarei se possivel trazer uma interação para esse tipo de visualização, onde vocês veram seus "tops 50 spotify artists" :stuck_out_tongue_winking_eye:, no mesmo formato que esse aqui de baixo, espero que gostem e deixem seu Like :thumbsup:, hahaha :joy:.
 
-<link rel="stylesheet" href="style.css">
+<!-- <link rel="stylesheet" href="style.css"> -->
 <body>
 
 <!-- Main -->
