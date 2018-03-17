@@ -25,5 +25,36 @@ preview = true
 
 Olá a todos, dessa vez estou dando uma passadinha rápida para mostrar-los uma nova visualização com os meus dados do spotify, eu espero que gostem, daqui alguns dias tentarei se possivel trazer uma interação para esse tipo de visualização, onde vocês veram seus "tops 50 spotify artists" :stuck_out_tongue_winking_eye:, no mesmo formato que esse aqui de baixo, espero que gostem e deixem seu Like :thumbsup:, hahaha :joy:.
 
-<div id="chart"></div>
+<link rel="stylesheet" href="style.css">
+<body>
 
+<!-- Main -->
+<div id="main">
+    <div class="box container">
+        <section>
+            <svg width="930" height="630">
+                <defs>
+                    <filter id="greyscale">
+                        <feColorMatrix
+                                type="matrix"
+                                values="0 1 0 0 0
+                  0 1 0 0 0
+                  0 1 0 0 0
+                  0 1 0 1 0 ">
+                        </feColorMatrix>
+                    </filter>
+                </defs>
+            </svg>
+        </section>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://raw.githubusercontent.com/tsleolima/portfolio-vis/master/content/meuTop50js/js/jquery.min.js"></script>
+<script src="https://raw.githubusercontent.com/tsleolima/portfolio-vis/master/content/meuTop50js/js/skel.min.js"></script>
+<script src="https://raw.githubusercontent.com/tsleolima/portfolio-vis/master/content/meuTop50js/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="https://raw.githubusercontent.com/tsleolima/portfolio-vis/master/content/meuTop50js/js/main.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.js"></script>
+<script src="scripts/music_graph.js"></script>
