@@ -50,10 +50,10 @@ Olá a todos, dessa vez estou dando uma passadinha rápida para mostrar a vocês
         Créditos ao criador: https://github.com/ss1993/my-spotify-top50
 
 <!-- Scripts -->
-<script src="https://cdn.rawgit.com/tsleolima/portfolio-vis/ed55de71/content/meuTop50js/js/jquery.min.js"></script>
-<script src="https://cdn.rawgit.com/tsleolima/portfolio-vis/ed55de71/content/meuTop50js/js/skel.min.js"></script>
-<script src="https://cdn.rawgit.com/tsleolima/portfolio-vis/ed55de71/content/meuTop50js/js/util.js"></script>
-<script src="https://cdn.rawgit.com/tsleolima/portfolio-vis/ed55de71/content/meuTop50js/js/main.js"></script>
+<script src="https://cdn.rawgit.com/tsleolima/my-spotify-top50/63544b43/assets/js/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/tsleolima/my-spotify-top50/63544b43/assets/js/skel.min.js"></script>
+<script src="https://cdn.rawgit.com/tsleolima/my-spotify-top50/63544b43/assets/js/util.js"></script>
+<script src="https://cdn.rawgit.com/tsleolima/my-spotify-top50/63544b43/assets/js/main.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.js"></script>
-<script src="https://cdn.rawgit.com/tsleolima/portfolio-vis/2cec3507/content/meuTop50js/js/music_graph.js"></script>
+<script src="https://cdn.rawgit.com/tsleolima/my-spotify-top50/fb4ac40e/scripts/music_graph.js"></script>
