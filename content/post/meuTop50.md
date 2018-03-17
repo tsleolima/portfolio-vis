@@ -56,4 +56,4 @@ Olá a todos, dessa vez estou dando uma passadinha rápida para mostrar a vocês
 <script src="https://cdn.rawgit.com/tsleolima/portfolio-vis/ed55de71/content/meuTop50js/js/main.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.js"></script>
-<script src="https://cdn.rawgit.com/tsleolima/portfolio-vis/ed55de71/content/meuTop50js/js/music_graph.js"></script>
+<script src="https://cdn.rawgit.com/tsleolima/portfolio-vis/2cec3507/content/meuTop50js/js/music_graph.js"></script>
