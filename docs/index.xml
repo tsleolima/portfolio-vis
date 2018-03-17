@@ -45,13 +45,13 @@
 
 &lt;!-- Scripts --&gt;
 
-&lt;script src=&#34;https://cdn.rawgit.com/tsleolima/portfolio-vis/ed55de71/content/meuTop50js/js/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cdn.rawgit.com/tsleolima/portfolio-vis/ed55de71/content/meuTop50js/js/skel.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cdn.rawgit.com/tsleolima/portfolio-vis/ed55de71/content/meuTop50js/js/util.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cdn.rawgit.com/tsleolima/portfolio-vis/ed55de71/content/meuTop50js/js/main.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.rawgit.com/tsleolima/my-spotify-top50/63544b43/assets/js/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.rawgit.com/tsleolima/my-spotify-top50/63544b43/assets/js/skel.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.rawgit.com/tsleolima/my-spotify-top50/63544b43/assets/js/util.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.rawgit.com/tsleolima/my-spotify-top50/63544b43/assets/js/main.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://d3js.org/d3.v4.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cdn.rawgit.com/tsleolima/portfolio-vis/2cec3507/content/meuTop50js/js/music_graph.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.rawgit.com/tsleolima/my-spotify-top50/fb4ac40e/scripts/music_graph.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
